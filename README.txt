@@ -16,9 +16,9 @@ Who I am:
 	Questions, comments, compliments, constructive criticism? Contact me!
 
 What it is:
-	A localized, multi-lingual customizable and extendable text layout and
-	rendering engine for labels and buttons based on Core Text and Core Graphics
-	using Objective-C.
+     	DHSGlyphText is a localized, multi-lingual customizable and extendable
+	text layout and rendering engine for iOS UILabel and UIButton based
+	on Core Text and Core Graphics using Objective-C.
 
 What it is NOT:
 	An Objective-C wrapper around Text Kit or Core Text.
