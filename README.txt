@@ -7,7 +7,7 @@ Thanks for using DHSGlyphText!
 Created: 11/23/2013
 Last Edit: 12/2/2013
 Version: 0.1.0
-Repo: git://???
+Repo: https://github.com/DShaneNYC/DHSGlyphText.git
 Requires: iOS 7+
 
 Who I am:
