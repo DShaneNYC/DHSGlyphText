@@ -19,3 +19,31 @@ DerivedData
 
 #CocoaPods
 Pods
+
+# General
+*.o
+*.lo
+*.la
+*.al
+.libs
+*.so
+*.so.[0-9]*
+*.a
+*.pyc
+*.pyo
+*.rej
+*~
+#*#
+.#*
+.*.swp
+.DS_Store
+build
+*~.nib
+*.pbxuser
+*.mode*
+*.perspective*
+*.xcworkspace
+xcuserdata
+.buildpath
+.project
+.settings

@@ -1,0 +1,13 @@
+====================
+--- DHSGlyphText ---
+====================
+
+TODO:
+
+1) Add rotation of individual glyphs in DHSGlyphLabel rendering
+2) Add support for DHSGlyphTextView subclass of UITextView and other text based views
+3) Add more typesetters
+4) Add support for rendering inner shadows
+5) Handle gradients when rendering individual glyphs (such as rotation)
+6) Separate rendering with a CGContextRef to outside a DHSGlyphLabel so it can be used in
+other UIView subclasses
