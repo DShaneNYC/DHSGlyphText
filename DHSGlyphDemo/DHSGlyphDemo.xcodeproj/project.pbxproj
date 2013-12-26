@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		632A63AF182EA06000F69D1B /* DHSGlyphButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6391182EA06000F69D1B /* DHSGlyphButton.m */; };
+		632A63B0182EA06000F69D1B /* DHSGlyphButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6391182EA06000F69D1B /* DHSGlyphButton.m */; };
+		632A63B1182EA06000F69D1B /* DHSGlyphButtonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6394182EA06000F69D1B /* DHSGlyphButtonBase.m */; };
+		632A63B2182EA06000F69D1B /* DHSGlyphButtonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6394182EA06000F69D1B /* DHSGlyphButtonBase.m */; };
+		632A63B3182EA06000F69D1B /* DHSGlyphButtonLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6396182EA06000F69D1B /* DHSGlyphButtonLine.m */; };
+		632A63B4182EA06000F69D1B /* DHSGlyphButtonLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6396182EA06000F69D1B /* DHSGlyphButtonLine.m */; };
+		632A63B5182EA06000F69D1B /* DHSGlyphCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6399182EA06000F69D1B /* DHSGlyphCache.m */; };
+		632A63B6182EA06000F69D1B /* DHSGlyphCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6399182EA06000F69D1B /* DHSGlyphCache.m */; };
+		632A63B7182EA06000F69D1B /* DHSGlyphSizeCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A639B182EA06000F69D1B /* DHSGlyphSizeCache.m */; };
+		632A63B8182EA06000F69D1B /* DHSGlyphSizeCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A639B182EA06000F69D1B /* DHSGlyphSizeCache.m */; };
+		632A63B9182EA06000F69D1B /* DHSGlyphFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A639E182EA06000F69D1B /* DHSGlyphFont.m */; };
+		632A63BA182EA06000F69D1B /* DHSGlyphFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A639E182EA06000F69D1B /* DHSGlyphFont.m */; };
+		632A63BB182EA06000F69D1B /* DHSGlyphLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A1182EA06000F69D1B /* DHSGlyphLabel.m */; };
+		632A63BC182EA06000F69D1B /* DHSGlyphLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A1182EA06000F69D1B /* DHSGlyphLabel.m */; };
+		632A63BD182EA06000F69D1B /* DHSGlyphLabelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A4182EA06000F69D1B /* DHSGlyphLabelBase.m */; };
+		632A63BE182EA06000F69D1B /* DHSGlyphLabelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A4182EA06000F69D1B /* DHSGlyphLabelBase.m */; };
+		632A63BF182EA06000F69D1B /* DHSGlyphLabelLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A6182EA06000F69D1B /* DHSGlyphLabelLine.m */; };
+		632A63C0182EA06000F69D1B /* DHSGlyphLabelLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A6182EA06000F69D1B /* DHSGlyphLabelLine.m */; };
+		632A63C1182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A9182EA06000F69D1B /* DHSGlyphTypesetter.m */; };
+		632A63C2182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A9182EA06000F69D1B /* DHSGlyphTypesetter.m */; };
+		632A63C3182EA06000F69D1B /* DHSGlyphTypesetterBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AC182EA06000F69D1B /* DHSGlyphTypesetterBase.m */; };
+		632A63C4182EA06000F69D1B /* DHSGlyphTypesetterBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AC182EA06000F69D1B /* DHSGlyphTypesetterBase.m */; };
+		632A63C5182EA06000F69D1B /* DHSGlyphTypesetterLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AE182EA06000F69D1B /* DHSGlyphTypesetterLine.m */; };
+		632A63C6182EA06000F69D1B /* DHSGlyphTypesetterLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AE182EA06000F69D1B /* DHSGlyphTypesetterLine.m */; };
+		6387D820184CD3B700824F5E /* DHSGlyphLabelRandomShift.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387D81F184CD3B700824F5E /* DHSGlyphLabelRandomShift.m */; };
+		6387D821184CD3B700824F5E /* DHSGlyphLabelRandomShift.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387D81F184CD3B700824F5E /* DHSGlyphLabelRandomShift.m */; };
+		639A7DAA184BF08F001F991F /* DHSGlyphTypesetterRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A7DA9184BF08F001F991F /* DHSGlyphTypesetterRotation.m */; };
+		639A7DAB184BF08F001F991F /* DHSGlyphTypesetterRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A7DA9184BF08F001F991F /* DHSGlyphTypesetterRotation.m */; };
+		639A7DAE184C230D001F991F /* DHSGlyphLabelRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A7DAD184C230D001F991F /* DHSGlyphLabelRotation.m */; };
+		639A7DAF184C230D001F991F /* DHSGlyphLabelRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A7DAD184C230D001F991F /* DHSGlyphLabelRotation.m */; };
+		639A7DB2184C422A001F991F /* DHSGlyphTypesetterRandomShift.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A7DB1184C422A001F991F /* DHSGlyphTypesetterRandomShift.m */; };
+		639A7DB3184C422A001F991F /* DHSGlyphTypesetterRandomShift.m in Sources */ = {isa = PBXBuildFile; fileRef = 639A7DB1184C422A001F991F /* DHSGlyphTypesetterRandomShift.m */; };
+		63A15C47181F00700004141C /* giant_head_regular_tt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63A15C44181F00700004141C /* giant_head_regular_tt.ttf */; };
+		63A15C48181F00700004141C /* giant_head_regular_tt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63A15C44181F00700004141C /* giant_head_regular_tt.ttf */; };
+		63A15C49181F00700004141C /* naguri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63A15C45181F00700004141C /* naguri.ttf */; };
+		63A15C4A181F00700004141C /* naguri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63A15C45181F00700004141C /* naguri.ttf */; };
+		63A15C4B181F00700004141C /* STXINGKA.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 63A15C46181F00700004141C /* STXINGKA.TTF */; };
+		63A15C4C181F00700004141C /* STXINGKA.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 63A15C46181F00700004141C /* STXINGKA.TTF */; };
+		63DD3723181C56E9000C2837 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD3722181C56E9000C2837 /* Foundation.framework */; };
+		63DD3725181C56E9000C2837 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD3724181C56E9000C2837 /* CoreGraphics.framework */; };
+		63DD3727181C56E9000C2837 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD3726181C56E9000C2837 /* UIKit.framework */; };
+		63DD372D181C56EA000C2837 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63DD372B181C56EA000C2837 /* InfoPlist.strings */; };
+		63DD372F181C56EA000C2837 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD372E181C56EA000C2837 /* main.m */; };
+		63DD3733181C56EA000C2837 /* DHSGDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD3732181C56EA000C2837 /* DHSGDAppDelegate.m */; };
+		63DD3736181C56EA000C2837 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DD3734181C56EA000C2837 /* Main_iPhone.storyboard */; };
+		63DD3739181C56EA000C2837 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DD3737181C56EA000C2837 /* Main_iPad.storyboard */; };
+		63DD373C181C56EA000C2837 /* DHSGDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD373B181C56EA000C2837 /* DHSGDViewController.m */; };
+		63DD373E181C56EA000C2837 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63DD373D181C56EA000C2837 /* Images.xcassets */; };
+		63DD3745181C56EA000C2837 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD3744181C56EA000C2837 /* XCTest.framework */; };
+		63DD3746181C56EA000C2837 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD3722181C56E9000C2837 /* Foundation.framework */; };
+		63DD3747181C56EA000C2837 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD3726181C56E9000C2837 /* UIKit.framework */; };
+		63DD374F181C56EA000C2837 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63DD374D181C56EA000C2837 /* InfoPlist.strings */; };
+		63DD3751181C56EA000C2837 /* DHSGlyphDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD3750181C56EA000C2837 /* DHSGlyphDemoTests.m */; };
+		63DD3775181C57B1000C2837 /* DHSImageCacheL2.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD375D181C57B1000C2837 /* DHSImageCacheL2.m */; };
+		63DD3776181C57B1000C2837 /* DHSImageCacheL2.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD375D181C57B1000C2837 /* DHSImageCacheL2.m */; };
+		63DD3777181C57B1000C2837 /* DHSObject1LevelCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD375F181C57B1000C2837 /* DHSObject1LevelCache.m */; };
+		63DD3778181C57B1000C2837 /* DHSObject1LevelCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD375F181C57B1000C2837 /* DHSObject1LevelCache.m */; };
+		63DD3779181C57B1000C2837 /* DHSObject2LevelCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD3761181C57B1000C2837 /* DHSObject2LevelCache.m */; };
+		63DD377A181C57B1000C2837 /* DHSObject2LevelCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD3761181C57B1000C2837 /* DHSObject2LevelCache.m */; };
+		63DD378C181C57F8000C2837 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD378B181C57F8000C2837 /* CoreText.framework */; };
+		63DD378D181C5801000C2837 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DD378B181C57F8000C2837 /* CoreText.framework */; };
+		63DD3790181C9B00000C2837 /* DHSTest2Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD378F181C9B00000C2837 /* DHSTest2Cache.m */; };
+		63DD3791181C9B00000C2837 /* DHSTest2Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD378F181C9B00000C2837 /* DHSTest2Cache.m */; };
+		63DD3794181C9C25000C2837 /* DHSTest1Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD3793181C9C25000C2837 /* DHSTest1Cache.m */; };
+		63DD3795181C9C25000C2837 /* DHSTest1Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD3793181C9C25000C2837 /* DHSTest1Cache.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63DD3748181C56EA000C2837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63DD3717181C56E9000C2837 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63DD371E181C56E9000C2837;
+			remoteInfo = DHSGlyphDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		632A6390182EA06000F69D1B /* DHSGlyphButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphButton.h; sourceTree = "<group>"; };
+		632A6391182EA06000F69D1B /* DHSGlyphButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphButton.m; sourceTree = "<group>"; };
+		632A6392182EA06000F69D1B /* DHSGlyphButtonBase+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphButtonBase+Private.h"; sourceTree = "<group>"; };
+		632A6393182EA06000F69D1B /* DHSGlyphButtonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphButtonBase.h; sourceTree = "<group>"; };
+		632A6394182EA06000F69D1B /* DHSGlyphButtonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphButtonBase.m; sourceTree = "<group>"; };
+		632A6395182EA06000F69D1B /* DHSGlyphButtonLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphButtonLine.h; sourceTree = "<group>"; };
+		632A6396182EA06000F69D1B /* DHSGlyphButtonLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphButtonLine.m; sourceTree = "<group>"; };
+		632A6398182EA06000F69D1B /* DHSGlyphCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphCache.h; sourceTree = "<group>"; };
+		632A6399182EA06000F69D1B /* DHSGlyphCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphCache.m; sourceTree = "<group>"; };
+		632A639A182EA06000F69D1B /* DHSGlyphSizeCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphSizeCache.h; sourceTree = "<group>"; };
+		632A639B182EA06000F69D1B /* DHSGlyphSizeCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphSizeCache.m; sourceTree = "<group>"; };
+		632A639D182EA06000F69D1B /* DHSGlyphFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphFont.h; sourceTree = "<group>"; };
+		632A639E182EA06000F69D1B /* DHSGlyphFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphFont.m; sourceTree = "<group>"; };
+		632A63A0182EA06000F69D1B /* DHSGlyphLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabel.h; sourceTree = "<group>"; };
+		632A63A1182EA06000F69D1B /* DHSGlyphLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphLabel.m; sourceTree = "<group>"; };
+		632A63A2182EA06000F69D1B /* DHSGlyphLabelBase+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphLabelBase+Private.h"; sourceTree = "<group>"; };
+		632A63A3182EA06000F69D1B /* DHSGlyphLabelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabelBase.h; sourceTree = "<group>"; };
+		632A63A4182EA06000F69D1B /* DHSGlyphLabelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphLabelBase.m; sourceTree = "<group>"; };
+		632A63A5182EA06000F69D1B /* DHSGlyphLabelLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabelLine.h; sourceTree = "<group>"; };
+		632A63A6182EA06000F69D1B /* DHSGlyphLabelLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphLabelLine.m; sourceTree = "<group>"; };
+		632A63A8182EA06000F69D1B /* DHSGlyphTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTypesetter.h; sourceTree = "<group>"; };
+		632A63A9182EA06000F69D1B /* DHSGlyphTypesetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphTypesetter.m; sourceTree = "<group>"; };
+		632A63AA182EA06000F69D1B /* DHSGlyphTypesetterBase+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphTypesetterBase+Private.h"; sourceTree = "<group>"; };
+		632A63AB182EA06000F69D1B /* DHSGlyphTypesetterBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTypesetterBase.h; sourceTree = "<group>"; };
+		632A63AC182EA06000F69D1B /* DHSGlyphTypesetterBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphTypesetterBase.m; sourceTree = "<group>"; };
+		632A63AD182EA06000F69D1B /* DHSGlyphTypesetterLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTypesetterLine.h; sourceTree = "<group>"; };
+		632A63AE182EA06000F69D1B /* DHSGlyphTypesetterLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphTypesetterLine.m; sourceTree = "<group>"; };
+		6387D81E184CD3B700824F5E /* DHSGlyphLabelRandomShift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabelRandomShift.h; sourceTree = "<group>"; };
+		6387D81F184CD3B700824F5E /* DHSGlyphLabelRandomShift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphLabelRandomShift.m; sourceTree = "<group>"; };
+		6387D822184E247700824F5E /* DHSGlyphTextCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTextCommon.h; sourceTree = "<group>"; };
+		639A7DA8184BF08F001F991F /* DHSGlyphTypesetterRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTypesetterRotation.h; sourceTree = "<group>"; };
+		639A7DA9184BF08F001F991F /* DHSGlyphTypesetterRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphTypesetterRotation.m; sourceTree = "<group>"; };
+		639A7DAC184C230D001F991F /* DHSGlyphLabelRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabelRotation.h; sourceTree = "<group>"; };
+		639A7DAD184C230D001F991F /* DHSGlyphLabelRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphLabelRotation.m; sourceTree = "<group>"; };
+		639A7DB0184C422A001F991F /* DHSGlyphTypesetterRandomShift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTypesetterRandomShift.h; sourceTree = "<group>"; };
+		639A7DB1184C422A001F991F /* DHSGlyphTypesetterRandomShift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphTypesetterRandomShift.m; sourceTree = "<group>"; };
+		63A15C44181F00700004141C /* giant_head_regular_tt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = giant_head_regular_tt.ttf; sourceTree = "<group>"; };
+		63A15C45181F00700004141C /* naguri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = naguri.ttf; sourceTree = "<group>"; };
+		63A15C46181F00700004141C /* STXINGKA.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STXINGKA.TTF; sourceTree = "<group>"; };
+		63DD371F181C56E9000C2837 /* DHSGlyphDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHSGlyphDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DD3722181C56E9000C2837 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63DD3724181C56E9000C2837 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63DD3726181C56E9000C2837 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		63DD372A181C56EA000C2837 /* DHSGlyphDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DHSGlyphDemo-Info.plist"; sourceTree = "<group>"; };
+		63DD372C181C56EA000C2837 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63DD372E181C56EA000C2837 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63DD3730181C56EA000C2837 /* DHSGlyphDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphDemo-Prefix.pch"; sourceTree = "<group>"; };
+		63DD3731181C56EA000C2837 /* DHSGDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHSGDAppDelegate.h; sourceTree = "<group>"; };
+		63DD3732181C56EA000C2837 /* DHSGDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHSGDAppDelegate.m; sourceTree = "<group>"; };
+		63DD3735181C56EA000C2837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		63DD3738181C56EA000C2837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		63DD373A181C56EA000C2837 /* DHSGDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHSGDViewController.h; sourceTree = "<group>"; };
+		63DD373B181C56EA000C2837 /* DHSGDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHSGDViewController.m; sourceTree = "<group>"; };
+		63DD373D181C56EA000C2837 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		63DD3743181C56EA000C2837 /* DHSGlyphDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHSGlyphDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DD3744181C56EA000C2837 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		63DD374C181C56EA000C2837 /* DHSGlyphDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DHSGlyphDemoTests-Info.plist"; sourceTree = "<group>"; };
+		63DD374E181C56EA000C2837 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63DD3750181C56EA000C2837 /* DHSGlyphDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphDemoTests.m; sourceTree = "<group>"; };
+		63DD375C181C57B1000C2837 /* DHSImageCacheL2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSImageCacheL2.h; sourceTree = "<group>"; };
+		63DD375D181C57B1000C2837 /* DHSImageCacheL2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSImageCacheL2.m; sourceTree = "<group>"; };
+		63DD375E181C57B1000C2837 /* DHSObject1LevelCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSObject1LevelCache.h; sourceTree = "<group>"; };
+		63DD375F181C57B1000C2837 /* DHSObject1LevelCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSObject1LevelCache.m; sourceTree = "<group>"; };
+		63DD3760181C57B1000C2837 /* DHSObject2LevelCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSObject2LevelCache.h; sourceTree = "<group>"; };
+		63DD3761181C57B1000C2837 /* DHSObject2LevelCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSObject2LevelCache.m; sourceTree = "<group>"; };
+		63DD3774181C57B1000C2837 /* DHSSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSSynthesizeSingleton.h; sourceTree = "<group>"; };
+		63DD378B181C57F8000C2837 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		63DD378E181C9B00000C2837 /* DHSTest2Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSTest2Cache.h; sourceTree = "<group>"; };
+		63DD378F181C9B00000C2837 /* DHSTest2Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSTest2Cache.m; sourceTree = "<group>"; };
+		63DD3792181C9C25000C2837 /* DHSTest1Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSTest1Cache.h; sourceTree = "<group>"; };
+		63DD3793181C9C25000C2837 /* DHSTest1Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSTest1Cache.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63DD371C181C56E9000C2837 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD378C181C57F8000C2837 /* CoreText.framework in Frameworks */,
+				63DD3725181C56E9000C2837 /* CoreGraphics.framework in Frameworks */,
+				63DD3727181C56E9000C2837 /* UIKit.framework in Frameworks */,
+				63DD3723181C56E9000C2837 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63DD3740181C56EA000C2837 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD378D181C5801000C2837 /* CoreText.framework in Frameworks */,
+				63DD3745181C56EA000C2837 /* XCTest.framework in Frameworks */,
+				63DD3747181C56EA000C2837 /* UIKit.framework in Frameworks */,
+				63DD3746181C56EA000C2837 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		632A638F182EA06000F69D1B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				632A6390182EA06000F69D1B /* DHSGlyphButton.h */,
+				632A6391182EA06000F69D1B /* DHSGlyphButton.m */,
+				632A6395182EA06000F69D1B /* DHSGlyphButtonLine.h */,
+				632A6396182EA06000F69D1B /* DHSGlyphButtonLine.m */,
+				632A6393182EA06000F69D1B /* DHSGlyphButtonBase.h */,
+				632A6392182EA06000F69D1B /* DHSGlyphButtonBase+Private.h */,
+				632A6394182EA06000F69D1B /* DHSGlyphButtonBase.m */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		632A6397182EA06000F69D1B /* Caches */ = {
+			isa = PBXGroup;
+			children = (
+				632A6398182EA06000F69D1B /* DHSGlyphCache.h */,
+				632A6399182EA06000F69D1B /* DHSGlyphCache.m */,
+				632A639A182EA06000F69D1B /* DHSGlyphSizeCache.h */,
+				632A639B182EA06000F69D1B /* DHSGlyphSizeCache.m */,
+			);
+			path = Caches;
+			sourceTree = "<group>";
+		};
+		632A639C182EA06000F69D1B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				632A639D182EA06000F69D1B /* DHSGlyphFont.h */,
+				632A639E182EA06000F69D1B /* DHSGlyphFont.m */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		632A639F182EA06000F69D1B /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				6387D81E184CD3B700824F5E /* DHSGlyphLabelRandomShift.h */,
+				6387D81F184CD3B700824F5E /* DHSGlyphLabelRandomShift.m */,
+				639A7DAC184C230D001F991F /* DHSGlyphLabelRotation.h */,
+				639A7DAD184C230D001F991F /* DHSGlyphLabelRotation.m */,
+				632A63A0182EA06000F69D1B /* DHSGlyphLabel.h */,
+				632A63A1182EA06000F69D1B /* DHSGlyphLabel.m */,
+				632A63A5182EA06000F69D1B /* DHSGlyphLabelLine.h */,
+				632A63A6182EA06000F69D1B /* DHSGlyphLabelLine.m */,
+				632A63A3182EA06000F69D1B /* DHSGlyphLabelBase.h */,
+				632A63A2182EA06000F69D1B /* DHSGlyphLabelBase+Private.h */,
+				632A63A4182EA06000F69D1B /* DHSGlyphLabelBase.m */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		632A63A7182EA06000F69D1B /* Typesetters */ = {
+			isa = PBXGroup;
+			children = (
+				639A7DB0184C422A001F991F /* DHSGlyphTypesetterRandomShift.h */,
+				639A7DB1184C422A001F991F /* DHSGlyphTypesetterRandomShift.m */,
+				639A7DA8184BF08F001F991F /* DHSGlyphTypesetterRotation.h */,
+				639A7DA9184BF08F001F991F /* DHSGlyphTypesetterRotation.m */,
+				632A63A8182EA06000F69D1B /* DHSGlyphTypesetter.h */,
+				632A63A9182EA06000F69D1B /* DHSGlyphTypesetter.m */,
+				632A63AD182EA06000F69D1B /* DHSGlyphTypesetterLine.h */,
+				632A63AE182EA06000F69D1B /* DHSGlyphTypesetterLine.m */,
+				632A63AB182EA06000F69D1B /* DHSGlyphTypesetterBase.h */,
+				632A63AA182EA06000F69D1B /* DHSGlyphTypesetterBase+Private.h */,
+				632A63AC182EA06000F69D1B /* DHSGlyphTypesetterBase.m */,
+			);
+			path = Typesetters;
+			sourceTree = "<group>";
+		};
+		63A15C43181F00700004141C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				63A15C44181F00700004141C /* giant_head_regular_tt.ttf */,
+				63A15C45181F00700004141C /* naguri.ttf */,
+				63A15C46181F00700004141C /* STXINGKA.TTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		63DD3716181C56E9000C2837 = {
+			isa = PBXGroup;
+			children = (
+				63DD375A181C5786000C2837 /* External DHS Sources */,
+				63DD3728181C56E9000C2837 /* DHSGlyphDemo */,
+				63A15C43181F00700004141C /* Fonts */,
+				63DD374A181C56EA000C2837 /* DHSGlyphDemoTests */,
+				63DD3721181C56E9000C2837 /* Frameworks */,
+				63DD3720181C56E9000C2837 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63DD3720181C56E9000C2837 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63DD371F181C56E9000C2837 /* DHSGlyphDemo.app */,
+				63DD3743181C56EA000C2837 /* DHSGlyphDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63DD3721181C56E9000C2837 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63DD378B181C57F8000C2837 /* CoreText.framework */,
+				63DD3722181C56E9000C2837 /* Foundation.framework */,
+				63DD3724181C56E9000C2837 /* CoreGraphics.framework */,
+				63DD3726181C56E9000C2837 /* UIKit.framework */,
+				63DD3744181C56EA000C2837 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63DD3728181C56E9000C2837 /* DHSGlyphDemo */ = {
+			isa = PBXGroup;
+			children = (
+				63DD3731181C56EA000C2837 /* DHSGDAppDelegate.h */,
+				63DD3732181C56EA000C2837 /* DHSGDAppDelegate.m */,
+				63DD3734181C56EA000C2837 /* Main_iPhone.storyboard */,
+				63DD3737181C56EA000C2837 /* Main_iPad.storyboard */,
+				63DD373A181C56EA000C2837 /* DHSGDViewController.h */,
+				63DD373B181C56EA000C2837 /* DHSGDViewController.m */,
+				63DD373D181C56EA000C2837 /* Images.xcassets */,
+				63DD3729181C56EA000C2837 /* Supporting Files */,
+			);
+			path = DHSGlyphDemo;
+			sourceTree = "<group>";
+		};
+		63DD3729181C56EA000C2837 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63DD372A181C56EA000C2837 /* DHSGlyphDemo-Info.plist */,
+				63DD372B181C56EA000C2837 /* InfoPlist.strings */,
+				63DD372E181C56EA000C2837 /* main.m */,
+				63DD3730181C56EA000C2837 /* DHSGlyphDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63DD374A181C56EA000C2837 /* DHSGlyphDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				63DD3750181C56EA000C2837 /* DHSGlyphDemoTests.m */,
+				63DD374B181C56EA000C2837 /* Supporting Files */,
+			);
+			path = DHSGlyphDemoTests;
+			sourceTree = "<group>";
+		};
+		63DD374B181C56EA000C2837 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63DD374C181C56EA000C2837 /* DHSGlyphDemoTests-Info.plist */,
+				63DD374D181C56EA000C2837 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63DD375A181C5786000C2837 /* External DHS Sources */ = {
+			isa = PBXGroup;
+			children = (
+				63DD375B181C57B1000C2837 /* Caches */,
+				63DD3764181C57B1000C2837 /* Glyph Text */,
+				63DD3773181C57B1000C2837 /* Singleton */,
+			);
+			name = "External DHS Sources";
+			sourceTree = "<group>";
+		};
+		63DD375B181C57B1000C2837 /* Caches */ = {
+			isa = PBXGroup;
+			children = (
+				63DD379A181D71C0000C2837 /* Tests */,
+				63DD375C181C57B1000C2837 /* DHSImageCacheL2.h */,
+				63DD375D181C57B1000C2837 /* DHSImageCacheL2.m */,
+				63DD375E181C57B1000C2837 /* DHSObject1LevelCache.h */,
+				63DD375F181C57B1000C2837 /* DHSObject1LevelCache.m */,
+				63DD3760181C57B1000C2837 /* DHSObject2LevelCache.h */,
+				63DD3761181C57B1000C2837 /* DHSObject2LevelCache.m */,
+			);
+			name = Caches;
+			path = ../Common/Caches;
+			sourceTree = "<group>";
+		};
+		63DD3764181C57B1000C2837 /* Glyph Text */ = {
+			isa = PBXGroup;
+			children = (
+				6387D822184E247700824F5E /* DHSGlyphTextCommon.h */,
+				632A6397182EA06000F69D1B /* Caches */,
+				632A639C182EA06000F69D1B /* Fonts */,
+				632A63A7182EA06000F69D1B /* Typesetters */,
+				632A639F182EA06000F69D1B /* Labels */,
+				632A638F182EA06000F69D1B /* Buttons */,
+			);
+			name = "Glyph Text";
+			path = "../Common/Glyph Text";
+			sourceTree = "<group>";
+		};
+		63DD3773181C57B1000C2837 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				63DD3774181C57B1000C2837 /* DHSSynthesizeSingleton.h */,
+			);
+			name = Singleton;
+			path = ../Common/Singleton;
+			sourceTree = "<group>";
+		};
+		63DD379A181D71C0000C2837 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				63DD3792181C9C25000C2837 /* DHSTest1Cache.h */,
+				63DD3793181C9C25000C2837 /* DHSTest1Cache.m */,
+				63DD378E181C9B00000C2837 /* DHSTest2Cache.h */,
+				63DD378F181C9B00000C2837 /* DHSTest2Cache.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63DD371E181C56E9000C2837 /* DHSGlyphDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63DD3754181C56EA000C2837 /* Build configuration list for PBXNativeTarget "DHSGlyphDemo" */;
+			buildPhases = (
+				63DD371B181C56E9000C2837 /* Sources */,
+				63DD371C181C56E9000C2837 /* Frameworks */,
+				63DD371D181C56E9000C2837 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DHSGlyphDemo;
+			productName = DHSGlyphDemo;
+			productReference = 63DD371F181C56E9000C2837 /* DHSGlyphDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63DD3742181C56EA000C2837 /* DHSGlyphDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63DD3757181C56EA000C2837 /* Build configuration list for PBXNativeTarget "DHSGlyphDemoTests" */;
+			buildPhases = (
+				63DD373F181C56EA000C2837 /* Sources */,
+				63DD3740181C56EA000C2837 /* Frameworks */,
+				63DD3741181C56EA000C2837 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63DD3749181C56EA000C2837 /* PBXTargetDependency */,
+			);
+			name = DHSGlyphDemoTests;
+			productName = DHSGlyphDemoTests;
+			productReference = 63DD3743181C56EA000C2837 /* DHSGlyphDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63DD3717181C56E9000C2837 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DHSGD;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Optiquity, Inc.";
+				TargetAttributes = {
+					63DD3742181C56EA000C2837 = {
+						TestTargetID = 63DD371E181C56E9000C2837;
+					};
+				};
+			};
+			buildConfigurationList = 63DD371A181C56E9000C2837 /* Build configuration list for PBXProject "DHSGlyphDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63DD3716181C56E9000C2837;
+			productRefGroup = 63DD3720181C56E9000C2837 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63DD371E181C56E9000C2837 /* DHSGlyphDemo */,
+				63DD3742181C56EA000C2837 /* DHSGlyphDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63DD371D181C56E9000C2837 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD3739181C56EA000C2837 /* Main_iPad.storyboard in Resources */,
+				63A15C4B181F00700004141C /* STXINGKA.TTF in Resources */,
+				63A15C47181F00700004141C /* giant_head_regular_tt.ttf in Resources */,
+				63DD373E181C56EA000C2837 /* Images.xcassets in Resources */,
+				63DD3736181C56EA000C2837 /* Main_iPhone.storyboard in Resources */,
+				63A15C49181F00700004141C /* naguri.ttf in Resources */,
+				63DD372D181C56EA000C2837 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63DD3741181C56EA000C2837 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD374F181C56EA000C2837 /* InfoPlist.strings in Resources */,
+				63A15C4C181F00700004141C /* STXINGKA.TTF in Resources */,
+				63A15C4A181F00700004141C /* naguri.ttf in Resources */,
+				63A15C48181F00700004141C /* giant_head_regular_tt.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63DD371B181C56E9000C2837 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632A63BF182EA06000F69D1B /* DHSGlyphLabelLine.m in Sources */,
+				639A7DB2184C422A001F991F /* DHSGlyphTypesetterRandomShift.m in Sources */,
+				632A63C1182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */,
+				632A63B7182EA06000F69D1B /* DHSGlyphSizeCache.m in Sources */,
+				63DD3777181C57B1000C2837 /* DHSObject1LevelCache.m in Sources */,
+				632A63C3182EA06000F69D1B /* DHSGlyphTypesetterBase.m in Sources */,
+				639A7DAA184BF08F001F991F /* DHSGlyphTypesetterRotation.m in Sources */,
+				63DD3790181C9B00000C2837 /* DHSTest2Cache.m in Sources */,
+				63DD3775181C57B1000C2837 /* DHSImageCacheL2.m in Sources */,
+				632A63C5182EA06000F69D1B /* DHSGlyphTypesetterLine.m in Sources */,
+				632A63B1182EA06000F69D1B /* DHSGlyphButtonBase.m in Sources */,
+				632A63B9182EA06000F69D1B /* DHSGlyphFont.m in Sources */,
+				63DD372F181C56EA000C2837 /* main.m in Sources */,
+				632A63B5182EA06000F69D1B /* DHSGlyphCache.m in Sources */,
+				632A63B3182EA06000F69D1B /* DHSGlyphButtonLine.m in Sources */,
+				63DD373C181C56EA000C2837 /* DHSGDViewController.m in Sources */,
+				632A63AF182EA06000F69D1B /* DHSGlyphButton.m in Sources */,
+				63DD3733181C56EA000C2837 /* DHSGDAppDelegate.m in Sources */,
+				632A63BD182EA06000F69D1B /* DHSGlyphLabelBase.m in Sources */,
+				632A63BB182EA06000F69D1B /* DHSGlyphLabel.m in Sources */,
+				639A7DAE184C230D001F991F /* DHSGlyphLabelRotation.m in Sources */,
+				63DD3779181C57B1000C2837 /* DHSObject2LevelCache.m in Sources */,
+				63DD3794181C9C25000C2837 /* DHSTest1Cache.m in Sources */,
+				6387D820184CD3B700824F5E /* DHSGlyphLabelRandomShift.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63DD373F181C56EA000C2837 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63DD3791181C9B00000C2837 /* DHSTest2Cache.m in Sources */,
+				639A7DAF184C230D001F991F /* DHSGlyphLabelRotation.m in Sources */,
+				632A63C4182EA06000F69D1B /* DHSGlyphTypesetterBase.m in Sources */,
+				6387D821184CD3B700824F5E /* DHSGlyphLabelRandomShift.m in Sources */,
+				632A63B6182EA06000F69D1B /* DHSGlyphCache.m in Sources */,
+				632A63B2182EA06000F69D1B /* DHSGlyphButtonBase.m in Sources */,
+				632A63B4182EA06000F69D1B /* DHSGlyphButtonLine.m in Sources */,
+				632A63C6182EA06000F69D1B /* DHSGlyphTypesetterLine.m in Sources */,
+				639A7DB3184C422A001F991F /* DHSGlyphTypesetterRandomShift.m in Sources */,
+				63DD3795181C9C25000C2837 /* DHSTest1Cache.m in Sources */,
+				632A63B8182EA06000F69D1B /* DHSGlyphSizeCache.m in Sources */,
+				63DD3778181C57B1000C2837 /* DHSObject1LevelCache.m in Sources */,
+				632A63B0182EA06000F69D1B /* DHSGlyphButton.m in Sources */,
+				632A63BC182EA06000F69D1B /* DHSGlyphLabel.m in Sources */,
+				63DD377A181C57B1000C2837 /* DHSObject2LevelCache.m in Sources */,
+				639A7DAB184BF08F001F991F /* DHSGlyphTypesetterRotation.m in Sources */,
+				632A63BE182EA06000F69D1B /* DHSGlyphLabelBase.m in Sources */,
+				632A63C2182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */,
+				632A63C0182EA06000F69D1B /* DHSGlyphLabelLine.m in Sources */,
+				63DD3776181C57B1000C2837 /* DHSImageCacheL2.m in Sources */,
+				63DD3751181C56EA000C2837 /* DHSGlyphDemoTests.m in Sources */,
+				632A63BA182EA06000F69D1B /* DHSGlyphFont.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63DD3749181C56EA000C2837 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63DD371E181C56E9000C2837 /* DHSGlyphDemo */;
+			targetProxy = 63DD3748181C56EA000C2837 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63DD372B181C56EA000C2837 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63DD372C181C56EA000C2837 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		63DD3734181C56EA000C2837 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63DD3735181C56EA000C2837 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		63DD3737181C56EA000C2837 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63DD3738181C56EA000C2837 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		63DD374D181C56EA000C2837 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63DD374E181C56EA000C2837 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63DD3752181C56EA000C2837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"DHS_DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63DD3753181C56EA000C2837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63DD3755181C56EA000C2837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DHSGlyphDemo/DHSGlyphDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "DHSGlyphDemo/DHSGlyphDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		63DD3756181C56EA000C2837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DHSGlyphDemo/DHSGlyphDemo-Prefix.pch";
+				INFOPLIST_FILE = "DHSGlyphDemo/DHSGlyphDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		63DD3758181C56EA000C2837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DHSGlyphDemo.app/DHSGlyphDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DHSGlyphDemo/DHSGlyphDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "DHSGlyphDemoTests/DHSGlyphDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		63DD3759181C56EA000C2837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DHSGlyphDemo.app/DHSGlyphDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DHSGlyphDemo/DHSGlyphDemo-Prefix.pch";
+				INFOPLIST_FILE = "DHSGlyphDemoTests/DHSGlyphDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63DD371A181C56E9000C2837 /* Build configuration list for PBXProject "DHSGlyphDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63DD3752181C56EA000C2837 /* Debug */,
+				63DD3753181C56EA000C2837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63DD3754181C56EA000C2837 /* Build configuration list for PBXNativeTarget "DHSGlyphDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63DD3755181C56EA000C2837 /* Debug */,
+				63DD3756181C56EA000C2837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63DD3757181C56EA000C2837 /* Build configuration list for PBXNativeTarget "DHSGlyphDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63DD3758181C56EA000C2837 /* Debug */,
+				63DD3759181C56EA000C2837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63DD3717181C56E9000C2837 /* Project object */;
+}
