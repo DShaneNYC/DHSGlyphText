@@ -22,7 +22,7 @@
  limitations under the License.
  */
 
-#import "DHSGlyphTypesetterBase+Private.h"
+#import "DHSGlyphTypesetter+Private.h"
 #import "DHSGlyphTypesetterLine.h"
 
 #define DHSGLYPHTYPESETTER_LINE_DELIMITER         @"\n"

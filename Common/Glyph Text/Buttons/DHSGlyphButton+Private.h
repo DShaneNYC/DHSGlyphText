@@ -22,10 +22,10 @@
  limitations under the License.
  */
 
-#import "DHSGlyphButtonBase.h"
-#import "DHSGlyphLabelBase.h"
+#import "DHSGlyphButton.h"
+#import "DHSGlyphLabel.h"
 
-@interface DHSGlyphButtonBase (Private)
+@interface DHSGlyphButton (Private)
 
 //
 // Properties
@@ -50,7 +50,7 @@
  *
  * @return The \b DHSGlyphLabel created to be retained for the given state
  */
-- (DHSGlyphLabelBase *)setupLabelForState:(UIControlState)state;
+- (DHSGlyphLabel *)setupLabelForState:(UIControlState)state;
 
 /**
  * Called when changes to the button state parameters are made to force the button to re-render

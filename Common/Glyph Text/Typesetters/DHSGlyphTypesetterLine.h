@@ -22,7 +22,7 @@
  limitations under the License.
  */
 
-#import "DHSGlyphTypesetterBase.h"
+#import "DHSGlyphTypesetter.h"
 
 typedef enum {
     /// Line layout style that will center lines in the layout rect based on the default line spacing
@@ -49,6 +49,6 @@ typedef enum {
     DHSGlyphTypesetterLineLayoutInfoCount
 } DHSGlyphTypesetterLineLayoutInfo;
 
-@interface DHSGlyphTypesetterLine : DHSGlyphTypesetterBase
+@interface DHSGlyphTypesetterLine : DHSGlyphTypesetter
 
 @end

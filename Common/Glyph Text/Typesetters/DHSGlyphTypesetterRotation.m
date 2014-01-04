@@ -23,7 +23,7 @@
  */
 
 #import "DHSGlyphTypesetterRotation.h"
-#import "DHSGlyphTypesetterBase+Private.h"
+#import "DHSGlyphTypesetter+Private.h"
 
 @implementation DHSGlyphTypesetterRotation
 

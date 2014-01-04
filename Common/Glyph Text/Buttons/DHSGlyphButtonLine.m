@@ -23,7 +23,7 @@
  */
 
 #import "DHSGlyphButtonLine.h"
-#import "DHSGlyphButtonBase+Private.h"
+#import "DHSGlyphButton+Private.h"
 #import "DHSGlyphLabelLine.h"
 
 @implementation DHSGlyphButtonLine
@@ -31,9 +31,9 @@
 #pragma mark -
 #pragma mark Initialization methods
 
-- (DHSGlyphLabelBase *)setupLabelForState:(UIControlState)state {
+- (DHSGlyphLabel *)setupLabelForState:(UIControlState)state {
     // Subclasses can specify a different DHSGlyphLabelBase for any state
-    return (DHSGlyphLabelBase *)[[DHSGlyphLabelLine alloc] initWithFrame:self.frame];
+    return (DHSGlyphLabel *)[[DHSGlyphLabelLine alloc] initWithFrame:self.frame];
 }
 
 
@@ -43,7 +43,7 @@
 - (void)setLineLayoutStyle:(DHSGlyphTypesetterLineLayoutStyle)lineLayoutStyle {
 	// Set for all states
 	for (NSNumber *key in self.states) {
-		DHSGlyphLabelBase *label = [self.states objectForKey:key];
+		DHSGlyphLabel *label = [self.states objectForKey:key];
         [(DHSGlyphLabelLine *)label setLineLayoutStyle:lineLayoutStyle];
 	}
     
@@ -51,7 +51,7 @@
 }
 
 - (void)setLineLayoutStyle:(DHSGlyphTypesetterLineLayoutStyle)lineLayoutStyle forState:(UIControlState)state {
-	DHSGlyphLabelBase *label = [self.states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = [self.states objectForKey:[NSNumber numberWithInt:state]];
     [(DHSGlyphLabelLine *)label setLineLayoutStyle:lineLayoutStyle];
     
 	[self setImages];
@@ -61,7 +61,7 @@
 - (void)setLineLayoutStyleMultiplier:(CGFloat)lineLayoutStyleMultiplier {
 	// Set for all states
 	for (NSNumber *key in self.states) {
-		DHSGlyphLabelBase *label = [self.states objectForKey:key];
+		DHSGlyphLabel *label = [self.states objectForKey:key];
         [(DHSGlyphLabelLine *)label setLineLayoutStyleMultiplier:lineLayoutStyleMultiplier];
 	}
     
@@ -69,7 +69,7 @@
 }
 
 - (void)setLineLayoutStyleMultiplier:(CGFloat)lineLayoutStyleMultiplier forState:(UIControlState)state {
-	DHSGlyphLabelBase *label = [self.states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = [self.states objectForKey:[NSNumber numberWithInt:state]];
 	[(DHSGlyphLabelLine *)label setLineLayoutStyleMultiplier:lineLayoutStyleMultiplier];
     
 	[self setImages];

@@ -22,9 +22,9 @@
  limitations under the License.
  */
 
-#import "DHSGlyphLabelBase+Private.h"
+#import "DHSGlyphLabel+Private.h"
 #import "DHSGlyphLabelLine.h"
-#import "DHSGlyphTypesetterBase+Private.h"
+#import "DHSGlyphTypesetter+Private.h"
 #import "DHSGlyphTypesetterLine.h"
 
 

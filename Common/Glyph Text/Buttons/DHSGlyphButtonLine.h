@@ -22,10 +22,10 @@
  limitations under the License.
  */
 
-#import "DHSGlyphButtonBase.h"
+#import "DHSGlyphButton.h"
 #import "DHSGlyphLabelLine.h"
 
-@interface DHSGlyphButtonLine : DHSGlyphButtonBase
+@interface DHSGlyphButtonLine : DHSGlyphButton
 
 #pragma mark -
 #pragma mark Label Line Rendering Parameter methods

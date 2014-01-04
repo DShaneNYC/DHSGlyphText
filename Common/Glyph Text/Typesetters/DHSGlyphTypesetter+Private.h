@@ -22,11 +22,11 @@
  limitations under the License.
  */
 
-#import "DHSGlyphTypesetterBase.h"
+#import "DHSGlyphTypesetter.h"
 
 #define DHSGLYPH_NO_ROTATION        MAXFLOAT
 
-@interface DHSGlyphTypesetterBase (Private)
+@interface DHSGlyphTypesetter (Private)
 
 #pragma mark -
 #pragma mark Properties

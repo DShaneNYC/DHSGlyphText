@@ -22,9 +22,9 @@
  limitations under the License.
  */
 
-#import "DHSGlyphLabelBase.h"
+#import "DHSGlyphLabel.h"
 
-@interface DHSGlyphLabelBase (Private)
+@interface DHSGlyphLabel (Private)
 
 #pragma mark -
 #pragma mark Properties

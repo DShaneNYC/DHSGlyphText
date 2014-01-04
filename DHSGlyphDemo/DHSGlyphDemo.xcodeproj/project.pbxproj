@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		632A63AF182EA06000F69D1B /* DHSGlyphButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6391182EA06000F69D1B /* DHSGlyphButton.m */; };
-		632A63B0182EA06000F69D1B /* DHSGlyphButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6391182EA06000F69D1B /* DHSGlyphButton.m */; };
-		632A63B1182EA06000F69D1B /* DHSGlyphButtonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6394182EA06000F69D1B /* DHSGlyphButtonBase.m */; };
-		632A63B2182EA06000F69D1B /* DHSGlyphButtonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6394182EA06000F69D1B /* DHSGlyphButtonBase.m */; };
+		632A63B1182EA06000F69D1B /* DHSGlyphButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6394182EA06000F69D1B /* DHSGlyphButton.m */; };
+		632A63B2182EA06000F69D1B /* DHSGlyphButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6394182EA06000F69D1B /* DHSGlyphButton.m */; };
 		632A63B3182EA06000F69D1B /* DHSGlyphButtonLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6396182EA06000F69D1B /* DHSGlyphButtonLine.m */; };
 		632A63B4182EA06000F69D1B /* DHSGlyphButtonLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6396182EA06000F69D1B /* DHSGlyphButtonLine.m */; };
 		632A63B5182EA06000F69D1B /* DHSGlyphCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A6399182EA06000F69D1B /* DHSGlyphCache.m */; };
@@ -19,16 +17,12 @@
 		632A63B8182EA06000F69D1B /* DHSGlyphSizeCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A639B182EA06000F69D1B /* DHSGlyphSizeCache.m */; };
 		632A63B9182EA06000F69D1B /* DHSGlyphFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A639E182EA06000F69D1B /* DHSGlyphFont.m */; };
 		632A63BA182EA06000F69D1B /* DHSGlyphFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A639E182EA06000F69D1B /* DHSGlyphFont.m */; };
-		632A63BB182EA06000F69D1B /* DHSGlyphLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A1182EA06000F69D1B /* DHSGlyphLabel.m */; };
-		632A63BC182EA06000F69D1B /* DHSGlyphLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A1182EA06000F69D1B /* DHSGlyphLabel.m */; };
-		632A63BD182EA06000F69D1B /* DHSGlyphLabelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A4182EA06000F69D1B /* DHSGlyphLabelBase.m */; };
-		632A63BE182EA06000F69D1B /* DHSGlyphLabelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A4182EA06000F69D1B /* DHSGlyphLabelBase.m */; };
+		632A63BD182EA06000F69D1B /* DHSGlyphLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A4182EA06000F69D1B /* DHSGlyphLabel.m */; };
+		632A63BE182EA06000F69D1B /* DHSGlyphLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A4182EA06000F69D1B /* DHSGlyphLabel.m */; };
 		632A63BF182EA06000F69D1B /* DHSGlyphLabelLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A6182EA06000F69D1B /* DHSGlyphLabelLine.m */; };
 		632A63C0182EA06000F69D1B /* DHSGlyphLabelLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A6182EA06000F69D1B /* DHSGlyphLabelLine.m */; };
-		632A63C1182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A9182EA06000F69D1B /* DHSGlyphTypesetter.m */; };
-		632A63C2182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63A9182EA06000F69D1B /* DHSGlyphTypesetter.m */; };
-		632A63C3182EA06000F69D1B /* DHSGlyphTypesetterBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AC182EA06000F69D1B /* DHSGlyphTypesetterBase.m */; };
-		632A63C4182EA06000F69D1B /* DHSGlyphTypesetterBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AC182EA06000F69D1B /* DHSGlyphTypesetterBase.m */; };
+		632A63C3182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AC182EA06000F69D1B /* DHSGlyphTypesetter.m */; };
+		632A63C4182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AC182EA06000F69D1B /* DHSGlyphTypesetter.m */; };
 		632A63C5182EA06000F69D1B /* DHSGlyphTypesetterLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AE182EA06000F69D1B /* DHSGlyphTypesetterLine.m */; };
 		632A63C6182EA06000F69D1B /* DHSGlyphTypesetterLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 632A63AE182EA06000F69D1B /* DHSGlyphTypesetterLine.m */; };
 		6387D820184CD3B700824F5E /* DHSGlyphLabelRandomShift.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387D81F184CD3B700824F5E /* DHSGlyphLabelRandomShift.m */; };
@@ -85,11 +79,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		632A6390182EA06000F69D1B /* DHSGlyphButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphButton.h; sourceTree = "<group>"; };
-		632A6391182EA06000F69D1B /* DHSGlyphButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphButton.m; sourceTree = "<group>"; };
-		632A6392182EA06000F69D1B /* DHSGlyphButtonBase+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphButtonBase+Private.h"; sourceTree = "<group>"; };
-		632A6393182EA06000F69D1B /* DHSGlyphButtonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphButtonBase.h; sourceTree = "<group>"; };
-		632A6394182EA06000F69D1B /* DHSGlyphButtonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphButtonBase.m; sourceTree = "<group>"; };
+		632A6392182EA06000F69D1B /* DHSGlyphButton+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphButton+Private.h"; sourceTree = "<group>"; };
+		632A6393182EA06000F69D1B /* DHSGlyphButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphButton.h; sourceTree = "<group>"; };
+		632A6394182EA06000F69D1B /* DHSGlyphButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphButton.m; sourceTree = "<group>"; };
 		632A6395182EA06000F69D1B /* DHSGlyphButtonLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphButtonLine.h; sourceTree = "<group>"; };
 		632A6396182EA06000F69D1B /* DHSGlyphButtonLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphButtonLine.m; sourceTree = "<group>"; };
 		632A6398182EA06000F69D1B /* DHSGlyphCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphCache.h; sourceTree = "<group>"; };
@@ -98,18 +90,14 @@
 		632A639B182EA06000F69D1B /* DHSGlyphSizeCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphSizeCache.m; sourceTree = "<group>"; };
 		632A639D182EA06000F69D1B /* DHSGlyphFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphFont.h; sourceTree = "<group>"; };
 		632A639E182EA06000F69D1B /* DHSGlyphFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphFont.m; sourceTree = "<group>"; };
-		632A63A0182EA06000F69D1B /* DHSGlyphLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabel.h; sourceTree = "<group>"; };
-		632A63A1182EA06000F69D1B /* DHSGlyphLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphLabel.m; sourceTree = "<group>"; };
-		632A63A2182EA06000F69D1B /* DHSGlyphLabelBase+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphLabelBase+Private.h"; sourceTree = "<group>"; };
-		632A63A3182EA06000F69D1B /* DHSGlyphLabelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabelBase.h; sourceTree = "<group>"; };
-		632A63A4182EA06000F69D1B /* DHSGlyphLabelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphLabelBase.m; sourceTree = "<group>"; };
+		632A63A2182EA06000F69D1B /* DHSGlyphLabel+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphLabel+Private.h"; sourceTree = "<group>"; };
+		632A63A3182EA06000F69D1B /* DHSGlyphLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabel.h; sourceTree = "<group>"; };
+		632A63A4182EA06000F69D1B /* DHSGlyphLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphLabel.m; sourceTree = "<group>"; };
 		632A63A5182EA06000F69D1B /* DHSGlyphLabelLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabelLine.h; sourceTree = "<group>"; };
 		632A63A6182EA06000F69D1B /* DHSGlyphLabelLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphLabelLine.m; sourceTree = "<group>"; };
-		632A63A8182EA06000F69D1B /* DHSGlyphTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTypesetter.h; sourceTree = "<group>"; };
-		632A63A9182EA06000F69D1B /* DHSGlyphTypesetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphTypesetter.m; sourceTree = "<group>"; };
-		632A63AA182EA06000F69D1B /* DHSGlyphTypesetterBase+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphTypesetterBase+Private.h"; sourceTree = "<group>"; };
-		632A63AB182EA06000F69D1B /* DHSGlyphTypesetterBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTypesetterBase.h; sourceTree = "<group>"; };
-		632A63AC182EA06000F69D1B /* DHSGlyphTypesetterBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphTypesetterBase.m; sourceTree = "<group>"; };
+		632A63AA182EA06000F69D1B /* DHSGlyphTypesetter+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHSGlyphTypesetter+Private.h"; sourceTree = "<group>"; };
+		632A63AB182EA06000F69D1B /* DHSGlyphTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTypesetter.h; sourceTree = "<group>"; };
+		632A63AC182EA06000F69D1B /* DHSGlyphTypesetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphTypesetter.m; sourceTree = "<group>"; };
 		632A63AD182EA06000F69D1B /* DHSGlyphTypesetterLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphTypesetterLine.h; sourceTree = "<group>"; };
 		632A63AE182EA06000F69D1B /* DHSGlyphTypesetterLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSGlyphTypesetterLine.m; sourceTree = "<group>"; };
 		6387D81E184CD3B700824F5E /* DHSGlyphLabelRandomShift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSGlyphLabelRandomShift.h; sourceTree = "<group>"; };
@@ -187,13 +175,11 @@
 		632A638F182EA06000F69D1B /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				632A6390182EA06000F69D1B /* DHSGlyphButton.h */,
-				632A6391182EA06000F69D1B /* DHSGlyphButton.m */,
 				632A6395182EA06000F69D1B /* DHSGlyphButtonLine.h */,
 				632A6396182EA06000F69D1B /* DHSGlyphButtonLine.m */,
-				632A6393182EA06000F69D1B /* DHSGlyphButtonBase.h */,
-				632A6392182EA06000F69D1B /* DHSGlyphButtonBase+Private.h */,
-				632A6394182EA06000F69D1B /* DHSGlyphButtonBase.m */,
+				632A6393182EA06000F69D1B /* DHSGlyphButton.h */,
+				632A6392182EA06000F69D1B /* DHSGlyphButton+Private.h */,
+				632A6394182EA06000F69D1B /* DHSGlyphButton.m */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -225,13 +211,11 @@
 				6387D81F184CD3B700824F5E /* DHSGlyphLabelRandomShift.m */,
 				639A7DAC184C230D001F991F /* DHSGlyphLabelRotation.h */,
 				639A7DAD184C230D001F991F /* DHSGlyphLabelRotation.m */,
-				632A63A0182EA06000F69D1B /* DHSGlyphLabel.h */,
-				632A63A1182EA06000F69D1B /* DHSGlyphLabel.m */,
 				632A63A5182EA06000F69D1B /* DHSGlyphLabelLine.h */,
 				632A63A6182EA06000F69D1B /* DHSGlyphLabelLine.m */,
-				632A63A3182EA06000F69D1B /* DHSGlyphLabelBase.h */,
-				632A63A2182EA06000F69D1B /* DHSGlyphLabelBase+Private.h */,
-				632A63A4182EA06000F69D1B /* DHSGlyphLabelBase.m */,
+				632A63A3182EA06000F69D1B /* DHSGlyphLabel.h */,
+				632A63A2182EA06000F69D1B /* DHSGlyphLabel+Private.h */,
+				632A63A4182EA06000F69D1B /* DHSGlyphLabel.m */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -243,13 +227,11 @@
 				639A7DB1184C422A001F991F /* DHSGlyphTypesetterRandomShift.m */,
 				639A7DA8184BF08F001F991F /* DHSGlyphTypesetterRotation.h */,
 				639A7DA9184BF08F001F991F /* DHSGlyphTypesetterRotation.m */,
-				632A63A8182EA06000F69D1B /* DHSGlyphTypesetter.h */,
-				632A63A9182EA06000F69D1B /* DHSGlyphTypesetter.m */,
 				632A63AD182EA06000F69D1B /* DHSGlyphTypesetterLine.h */,
 				632A63AE182EA06000F69D1B /* DHSGlyphTypesetterLine.m */,
-				632A63AB182EA06000F69D1B /* DHSGlyphTypesetterBase.h */,
-				632A63AA182EA06000F69D1B /* DHSGlyphTypesetterBase+Private.h */,
-				632A63AC182EA06000F69D1B /* DHSGlyphTypesetterBase.m */,
+				632A63AB182EA06000F69D1B /* DHSGlyphTypesetter.h */,
+				632A63AA182EA06000F69D1B /* DHSGlyphTypesetter+Private.h */,
+				632A63AC182EA06000F69D1B /* DHSGlyphTypesetter.m */,
 			);
 			path = Typesetters;
 			sourceTree = "<group>";
@@ -507,24 +489,21 @@
 			files = (
 				632A63BF182EA06000F69D1B /* DHSGlyphLabelLine.m in Sources */,
 				639A7DB2184C422A001F991F /* DHSGlyphTypesetterRandomShift.m in Sources */,
-				632A63C1182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */,
 				632A63B7182EA06000F69D1B /* DHSGlyphSizeCache.m in Sources */,
 				63DD3777181C57B1000C2837 /* DHSObject1LevelCache.m in Sources */,
-				632A63C3182EA06000F69D1B /* DHSGlyphTypesetterBase.m in Sources */,
+				632A63C3182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */,
 				639A7DAA184BF08F001F991F /* DHSGlyphTypesetterRotation.m in Sources */,
 				63DD3790181C9B00000C2837 /* DHSTest2Cache.m in Sources */,
 				63DD3775181C57B1000C2837 /* DHSImageCacheL2.m in Sources */,
 				632A63C5182EA06000F69D1B /* DHSGlyphTypesetterLine.m in Sources */,
-				632A63B1182EA06000F69D1B /* DHSGlyphButtonBase.m in Sources */,
+				632A63B1182EA06000F69D1B /* DHSGlyphButton.m in Sources */,
 				632A63B9182EA06000F69D1B /* DHSGlyphFont.m in Sources */,
 				63DD372F181C56EA000C2837 /* main.m in Sources */,
 				632A63B5182EA06000F69D1B /* DHSGlyphCache.m in Sources */,
 				632A63B3182EA06000F69D1B /* DHSGlyphButtonLine.m in Sources */,
 				63DD373C181C56EA000C2837 /* DHSGDViewController.m in Sources */,
-				632A63AF182EA06000F69D1B /* DHSGlyphButton.m in Sources */,
 				63DD3733181C56EA000C2837 /* DHSGDAppDelegate.m in Sources */,
-				632A63BD182EA06000F69D1B /* DHSGlyphLabelBase.m in Sources */,
-				632A63BB182EA06000F69D1B /* DHSGlyphLabel.m in Sources */,
+				632A63BD182EA06000F69D1B /* DHSGlyphLabel.m in Sources */,
 				639A7DAE184C230D001F991F /* DHSGlyphLabelRotation.m in Sources */,
 				63DD3779181C57B1000C2837 /* DHSObject2LevelCache.m in Sources */,
 				63DD3794181C9C25000C2837 /* DHSTest1Cache.m in Sources */,
@@ -538,22 +517,19 @@
 			files = (
 				63DD3791181C9B00000C2837 /* DHSTest2Cache.m in Sources */,
 				639A7DAF184C230D001F991F /* DHSGlyphLabelRotation.m in Sources */,
-				632A63C4182EA06000F69D1B /* DHSGlyphTypesetterBase.m in Sources */,
+				632A63C4182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */,
 				6387D821184CD3B700824F5E /* DHSGlyphLabelRandomShift.m in Sources */,
 				632A63B6182EA06000F69D1B /* DHSGlyphCache.m in Sources */,
-				632A63B2182EA06000F69D1B /* DHSGlyphButtonBase.m in Sources */,
+				632A63B2182EA06000F69D1B /* DHSGlyphButton.m in Sources */,
 				632A63B4182EA06000F69D1B /* DHSGlyphButtonLine.m in Sources */,
 				632A63C6182EA06000F69D1B /* DHSGlyphTypesetterLine.m in Sources */,
 				639A7DB3184C422A001F991F /* DHSGlyphTypesetterRandomShift.m in Sources */,
 				63DD3795181C9C25000C2837 /* DHSTest1Cache.m in Sources */,
 				632A63B8182EA06000F69D1B /* DHSGlyphSizeCache.m in Sources */,
 				63DD3778181C57B1000C2837 /* DHSObject1LevelCache.m in Sources */,
-				632A63B0182EA06000F69D1B /* DHSGlyphButton.m in Sources */,
-				632A63BC182EA06000F69D1B /* DHSGlyphLabel.m in Sources */,
 				63DD377A181C57B1000C2837 /* DHSObject2LevelCache.m in Sources */,
 				639A7DAB184BF08F001F991F /* DHSGlyphTypesetterRotation.m in Sources */,
-				632A63BE182EA06000F69D1B /* DHSGlyphLabelBase.m in Sources */,
-				632A63C2182EA06000F69D1B /* DHSGlyphTypesetter.m in Sources */,
+				632A63BE182EA06000F69D1B /* DHSGlyphLabel.m in Sources */,
 				632A63C0182EA06000F69D1B /* DHSGlyphLabelLine.m in Sources */,
 				63DD3776181C57B1000C2837 /* DHSImageCacheL2.m in Sources */,
 				63DD3751181C56EA000C2837 /* DHSGlyphDemoTests.m in Sources */,

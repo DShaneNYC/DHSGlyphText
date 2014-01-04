@@ -23,7 +23,7 @@
  */
 
 #import "DHSGlyphTypesetterRandomShift.h"
-#import "DHSGlyphTypesetterBase+Private.h"
+#import "DHSGlyphTypesetter+Private.h"
 
 #define ARC4RANDOM_MAX 0x100000000
 CGFloat randomFloat(CGFloat minRange, CGFloat maxRange);

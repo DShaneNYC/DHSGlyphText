@@ -31,6 +31,7 @@
     // Test DHSGlyph items
     IBOutlet UILabel *_titleLabel;
     
+    // This is the base class, but the nib is set to the DHSGlyph---Line version
     IBOutlet DHSGlyphLabel *_glyphLabel;
     IBOutlet DHSGlyphButton *_glyphButton;
     

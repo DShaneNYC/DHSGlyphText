@@ -16,7 +16,7 @@ Who I am:
 	Questions, comments, compliments, constructive criticism? Contact me!
 
 What it is:
-     	DHSGlyphText is a localized, multi-lingual customizable and extendable
+    DHSGlyphText is a localized, multi-lingual customizable and extendable
 	text layout and rendering engine for iOS UILabel and UIButton based
 	on Core Text and Core Graphics using Objective-C.
 
@@ -44,21 +44,20 @@ What is included:
 ============================
 
 1) DHSGlyphFont
-2) DHSGlyphTypesetterBase
-3) DHSGlyphLabelBase
-4) DHSGlyphButtonBase
+2) DHSGlyphTypesetter
+3) DHSGlyphLabel
+4) DHSGlyphButton
 
 1) DHSGlyphFont is a simple object that keeps CGFontRef and CTFontRef
 connections, as well as other information useful for layout and rendering
 
-2) DHSGlyphTypesetter is a subclass of DHSGlyphTypesetterLine -->
-DHSGlyphTypesetterBase and is used for layout of text in horizontal lines. While
-Text Kit and CTTypesetterRef in Core Text do this (and much more),
-DHSGlyphTypesetter does not use NSLayoutManager or CTTypesetterRef because it
-adjusts layout using some of the special parameters of DHSGlyphFont and
-DHSGlyphLabel.
+2) DHSGlyphTypesetter is the base class of DHSGlyphTypesetterLine which is used
+for layout of text in horizontal lines. While Text Kit and CTTypesetterRef in
+Core Text do this (and much more), DHSGlyphTypesetter does not use
+NSLayoutManager or CTTypesetterRef because it adjusts layout using some of the
+special parameters of DHSGlyphFont and DHSGlyphLabel.
 
-Additionally, it is possible to create a DHSGlyphTypesetterBase subclass that
+Additionally, it is possible to create a DHSGlyphTypesetter subclass that
 does non-linear layout by customizing glyph origins (points), bounding boxes
 (sizes) and rotations, so Text Kit and CTTypesetterRef would be useless. On the
 other hand, DHSGlyphTypesetter does use Core Text to do the heavy lifting to get
@@ -84,8 +83,6 @@ that would be useful for the layout desired.
 Example subclasses provided:
 	DHSGlyphTypesetterLine
 	 - a simple line based layout
-	DHSGlyphTypesetter
-	 - a skeleton subclass of DHSGlyphTypesetterLine
 	DHSGlyphTypesetterRotation
 	 - adds the same individual glyph rotation for all glyphs to DHSGlyphTypesetterLine
 	DHSGlyphTypesetterRandomShift
@@ -127,13 +124,13 @@ implement the following methods:
     constrainedToSize:(CGSize)size;
 - (BOOL)layoutInRect:(CGRect)rect;
               
-3) DHSGlyphLabel is a subclass of DHSGlyphLabelLine --> DHSGlyphLabelBase and is
-used for rendering text after it has been laid out by its retained
-DHSGlyphTypesetter. The DHSGlyphLabel is responsible for setting the
-DHSGlyphTypesetter parameters, requesting the layout from the typesetter, then
-rendering the result using Core Graphics. It attempts to do these different
-parts as efficiently as possible by doing them only when changes to parameters
-are set or by using DHSCache classes to optionally store previous renderings.
+3) DHSGlyphLabel is the base class of DHSGlyphLabelLine which is used for
+rendering text after it has been laid out by its retained DHSGlyphTypesetter.
+The DHSGlyphLabel is responsible for setting the DHSGlyphTypesetter parameters,
+requesting the layout from the typesetter, then rendering the result using Core
+Graphics. It attempts to do these different parts as efficiently as possible by
+doing them only when changes to parameters are set or by using DHSCache classes
+to optionally store previous renderings.
 
 Additionally, DHSGlyphLabels help with localization by allowing a different font
 to be set for each locale. A default and system font can also be set for backup
@@ -155,7 +152,6 @@ font for the current locale has not been set.
 	
 Example subclasses provided to easily set associated DHSGlyphTypesetter parameters:
 	DHSGlyphLabelLine
-	DHSGlyphLabel
 	DHSGlyphLabelRotation
 	DHSGlyphLabelRandomShift
 
@@ -178,17 +174,16 @@ implement the following methods:
 
 - (NSDictionary *)layoutInfo;
 
-4) DHSGlyphButton is a subclass of DHSGlyphButtonLine --> DHSGlyphButtonBase and
-it retains a different DHSGlyphLabel for each of its four UIControlStates. It
-takes advantage of a parameter of DHSGlyphLabel that shifts text to simulated a
-button tap. Subclasses can change this behavior.
+4) DHSGlyphButton is the base class of DHSGlyphButtonLine which retains a
+different DHSGlyphLabel for each of its four UIControlStates. It takes advantage
+of a parameter of DHSGlyphLabel that shifts text to simulated a button tap.
+Subclasses can change this behavior.
 
 - DHSGlyphButton uses DHSGlyphLabel for rendering
 - DHSGlyphButton classes are drop-in compatible with UIButton
 
 Example subclasses provided:
 	DHSGlyphButtonLine
-	DHSGlyphButton
 
 Subclassing notes:
 
@@ -198,7 +193,7 @@ method subclassed.
 Subclasses of DHSGlyphButton for pinning existing functionality should minimally
 implement the following methods:
 
-- (DHSGlyphLabelBase *)setupLabelForState:(UIControlState)state;
+- (DHSGlyphLabel *)setupLabelForState:(UIControlState)state;
 
 NOTES:
 - Subclassing of typesetters, labels and buttons for extending functionality or
