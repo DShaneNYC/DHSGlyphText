@@ -513,9 +513,11 @@
 }
 
 - (void)setText:(NSString *)text {
+    if ([text isEqualToString:self.text]) return;
+    
     [super setText:text];
     
-	// Choose the font
+	// Choose the font (and reset points)
     [self selectCurrentFont];
 }
 
@@ -988,8 +990,8 @@
     return super.hash ^
     [[NSValue valueWithCGSize:self.bounds.size] hash] ^
     [NSStringFromClass(self.class) hash] ^
-    // self.text.hash ^         // should be handled by super.hash
-    // self.textColor.hash ^    // should be handled by super.hash
+    self.text.hash ^         // should be handled by super.hash
+    self.textColor.hash ^    // should be handled by super.hash
     _currentFont.hash ^
     _typesetter.class.hash ^
     _typesetter.layoutInfo.hash ^
