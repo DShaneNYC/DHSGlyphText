@@ -4,8 +4,8 @@
 
 Thanks for using DHSGlyphText!
 
-Created: 11/23/2013
-Last Edit: 12/2/2013
+README Created: 11/23/2013
+README Last Edit: 1/28/2014
 Version: 0.1.0
 Repo: https://github.com/DShaneNYC/DHSGlyphText.git
 Requires: iOS 7+
@@ -26,6 +26,7 @@ What it is NOT:
 	Kit or Core Text.
 	A heavy weight component that leverages Web Kit for layout or rendering.
 
+Description:
 DHSGlyphText uses Core Text to perform the low level aggregation of glyph
 positioning information about text, but then uses its own layout engine to
 position and rendering engine to display either individual glyphs or blocks of
