@@ -167,6 +167,7 @@
     if (rotations && length > 0) rotations[0] = DHSGLYPH_NO_ROTATION;
         
     // Full (or partial) layout
+    if (length <= 0) return;
     CGRect *rects = (CGRect *)malloc(sizeof(CGRect) * length);
     CTFontGetOpticalBoundsForGlyphs(_font.ctFont, glyphs, rects, length, 0);
 

@@ -140,7 +140,7 @@
 	NSMutableArray *wordSizes = [[NSMutableArray alloc] initWithCapacity:[words count]];
 	NSInteger i = 0;
 	for (NSString *word in words) {
-		[wordSizes addObject:@([font sizeForText:[words objectAtIndex:i]].width)];
+        [wordSizes addObject:@([font sizeForText:word].width)];
 		++i;
 	}
 	
