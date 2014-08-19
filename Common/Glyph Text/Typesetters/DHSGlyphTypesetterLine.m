@@ -87,6 +87,7 @@
 		[lastList addObject:[NSNumber numberWithLong:lineFirstGlyph + glyphCount + 1]];
 		lineFirstGlyph = lineFirstGlyph + glyphCount;
 		firstLetter = lastLetter;
+        if (maxLineWidth == 0.0f) maxLineWidth = width;
 	} while (firstLetter < text.length);
     
 	// Get minimum size
@@ -189,6 +190,7 @@
 		[lastList addObject:[NSNumber numberWithLong:lineFirstGlyph + glyphCount + 1]];
 		lineFirstGlyph = lineFirstGlyph + glyphCount + 1;
 		firstWord = lastWord;
+        if (maxLineWidth == 0.0f) maxLineWidth = width;
 	} while (firstWord < [words count]);
     
 	// Get minimum size
