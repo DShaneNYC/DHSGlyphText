@@ -100,7 +100,7 @@
     CGFloat lineHeight = lineLayoutStyleMultiplier * spaceHeight;
     CGFloat useHeight = numLines == 1 ? spaceHeight : (numLines - 1) * lineHeight + spaceHeight;
     
-    return CGSizeMake(MIN(size.width, maxLineWidth), MIN(size.height, useHeight));
+    return CGSizeMake(size.width, MIN(size.height, useHeight));
 }
 
 + (CGSize)sizeForText:(NSString *)text
@@ -201,7 +201,7 @@
     CGFloat lineHeight = lineLayoutStyleMultiplier * spaceHeight;
     CGFloat useHeight = numLines == 1 ? spaceHeight : (numLines - 1) * lineHeight + spaceHeight;
     
-    return CGSizeMake(MIN(size.width, maxLineWidth), MIN(size.height, useHeight));
+    return CGSizeMake(size.width, MIN(size.height, useHeight));
 }
 
 + (CGSize)sizeForText:(NSString *)text
