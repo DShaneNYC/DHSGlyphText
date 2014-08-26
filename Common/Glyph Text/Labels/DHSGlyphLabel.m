@@ -987,27 +987,27 @@
 - (NSUInteger)hash {
     // Subclasses must overload this if new fields are added
     
-    return super.hash ^
-    [[NSValue valueWithCGSize:self.bounds.size] hash] ^
-    [NSStringFromClass(self.class) hash] ^
-    self.text.hash ^         // should be handled by super.hash
-    self.textColor.hash ^    // should be handled by super.hash
+    return
+    [@(self.bounds.size.width + self.bounds.size.height * 4000.0f) hash] ^
+    self.class.hash ^
+    self.text.hash ^
+    self.textColor.hash ^
     _currentFont.hash ^
     _typesetter.class.hash ^
     _typesetter.layoutInfo.hash ^
-    self.strokeColor.hash ^
-    [@(self.strokeWidth) hash] ^
-    self.shadowColor.hash ^
-    self.strokeHasShadow ^
-    [@(self.shadowBlur) hash] ^
-    [[NSValue valueWithCGSize:self.shadowOffset] hash] ^
-    self.glowColor.hash ^
-    [@(self.glowBlur) hash] ^
-    (_gradient ? 1 : 0) ^
-    [@(self.radialGradient) hash] ^
-    self.showIndividualGlyphStroke ^
-    self.showIndividualGlyphGlow ^
-    self.glyphRenderOrder;
+    (_strokeColor.hash << 1) ^
+    [@(_strokeWidth) hash] ^
+    (self.shadowColor.hash << 2) ^
+    (_strokeHasShadow ? 1 : 0) ^
+    [@(_shadowBlur) hash] ^
+    [@(self.shadowOffset.width + self.shadowOffset.height * 2000.0f) hash] ^
+    (_glowColor.hash << 3) ^
+    [@(_glowBlur) hash] ^
+    (_gradient ? 1 : 0) << 3 ^
+    [@(_radialGradient) hash] ^
+    (_showIndividualGlyphStroke ? 1 : 0) << 1 ^
+    (_showIndividualGlyphGlow ? 1 : 0) << 2 ^
+    _glyphRenderOrder;
 }
 
 - (NSString *)imageCacheHash {

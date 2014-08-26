@@ -285,15 +285,12 @@
 #pragma mark NSObject methods
 
 - (NSUInteger)hash {
-    NSUInteger hash = [super hash];
-    
-    hash ^= [_fontName hash];
-    hash ^= [@(_fontSize) hash];
-    hash ^= [[NSValue valueWithCGPoint:_scaleFactor] hash];
-    hash ^= [@(_descenderRatio) hash];
-    hash ^= [@(_glyphExpansionMultiplier) hash];
-    
-    return hash;
+    return
+    [_fontName hash] ^
+    [@(_fontSize) hash] ^
+    [@(_scaleFactor.x + _scaleFactor.y * 2000.0f) hash] ^
+    [@(_descenderRatio) hash] ^
+    [@(_glyphExpansionMultiplier) hash];
 }
 
 - (BOOL)isEqualToDHSGlyphFont:(DHSGlyphFont *)font {
