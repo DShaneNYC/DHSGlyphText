@@ -794,9 +794,6 @@
 	// Draw shadow
 	//
 
-    // Save Context
-    CGContextSaveGState(context);
-
     if (self.strokeHasShadow == NO ||
         useStrokeWidth == 0.0f ||
         CGSizeEqualToSize(self.shadowOffset, CGSizeZero) ||
@@ -837,9 +834,6 @@
         
     }
     
-    // Restore Context
-    CGContextRestoreGState(context);
-
     //
     // Draw text
     //

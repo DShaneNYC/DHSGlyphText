@@ -711,11 +711,12 @@
 #pragma mark View drawing methods
 
 - (void)drawRect:(CGRect)rect {
+	// Don't call super
+	// [super drawRect:rect];
+
     // Force rendering of images if needed
     [self prerenderCalculate];
     [self setImagesIfNeedsUpdate];
-    
-    [super drawRect:rect];
 }
 
 @end
