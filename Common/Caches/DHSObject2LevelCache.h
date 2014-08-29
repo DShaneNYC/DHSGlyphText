@@ -35,7 +35,7 @@
  * @param obj The object being removed
  * @param key The key for the object being removed
  */
-- (void)cache:(DHSObject2LevelCache *)cache willEvictObject:(id<NSCoding>)obj forKey:(id<NSCoding>)key;
+- (void)DHScache:(DHSObject2LevelCache *)cache willEvictObject:(id<NSCoding>)obj forKey:(id<NSCoding>)key;
 
 @end
 

@@ -277,7 +277,7 @@
 - (BOOL)removeFromLevel2ObjectForKey:(id<NSCoding, NSCopying>)key {
     if (_delegate) {
         id<NSCoding> obj = [self retrieveFromLevel2ObjectForKey:key];
-        if (obj) [_delegate cache:self willEvictObject:obj forKey:key];
+        if (obj) [_delegate DHScache:self willEvictObject:obj forKey:key];
     }
     
     // Delete object on disk
@@ -424,7 +424,7 @@
                 } else if (_delegate) {
                     // L1
                     id<NSCoding> obj = [_cacheItems objectForKey:key];
-                    if (obj) [_delegate cache:self willEvictObject:obj forKey:key];
+                    if (obj) [_delegate DHScache:self willEvictObject:obj forKey:key];
                 }
                 
                 // Both: if L2 remove NSNull, if L1 remove object
@@ -529,7 +529,7 @@
         } else if (_delegate) {
             // L1
             id<NSCoding> obj = [_cacheItems objectForKey:killKey];
-            if (obj) [_delegate cache:self willEvictObject:obj forKey:killKey];
+            if (obj) [_delegate DHScache:self willEvictObject:obj forKey:killKey];
         }
         
         // Both: if L2 remove NSNull, if L1 remove object
