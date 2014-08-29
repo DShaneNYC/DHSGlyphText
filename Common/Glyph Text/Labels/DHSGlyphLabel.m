@@ -982,7 +982,7 @@
     // Subclasses must overload this if new fields are added
     
     return
-    [@(self.bounds.size.width + self.bounds.size.height * 4000.0f) hash] ^
+    [@(self.bounds.size.width * 1000.0f + self.bounds.size.height * 4000.0f) hash] ^
     self.class.hash ^
     self.text.hash ^
     self.textColor.hash ^
@@ -990,18 +990,18 @@
     _typesetter.class.hash ^
     _typesetter.layoutInfo.hash ^
     (_strokeColor.hash << 1) ^
-    [@(_strokeWidth) hash] ^
+    [@(_strokeWidth * 10000.0f) hash] ^
     (self.shadowColor.hash << 2) ^
     (_strokeHasShadow ? 1 : 0) ^
-    [@(_shadowBlur) hash] ^
+    [@(_shadowBlur * 100.0f) hash] ^
     [@(self.shadowOffset.width + self.shadowOffset.height * 2000.0f) hash] ^
     (_glowColor.hash << 3) ^
-    [@(_glowBlur) hash] ^
+    [@(_glowBlur * 1000.0f) hash] ^
     (_gradient ? 1 : 0) << 3 ^
     [@(_radialGradient) hash] ^
     (_showIndividualGlyphStroke ? 1 : 0) << 1 ^
     (_showIndividualGlyphGlow ? 1 : 0) << 2 ^
-    _glyphRenderOrder;
+    _glyphRenderOrder << 4;
 }
 
 - (NSString *)imageCacheHash {
