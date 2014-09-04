@@ -37,12 +37,12 @@ CGFloat randomFloat(CGFloat minRange, CGFloat maxRange);
     NSMutableDictionary *info = [NSMutableDictionary dictionaryWithDictionary:super.defaultLayoutInfo];
     
     [info addEntriesFromDictionary:
-     @{@(DHSGlyphTypesetterRandomShiftLayoutInfoHorizontalRatioMin) : @(0.0f), // No random shift
-       @(DHSGlyphTypesetterRandomShiftLayoutInfoHorizontalRatioMax) : @(0.0f), // No random shift
-       @(DHSGlyphTypesetterRandomShiftLayoutInfoVerticalRatioMin) : @(0.0f), // No random shift
-       @(DHSGlyphTypesetterRandomShiftLayoutInfoVerticalRatioMax) : @(0.0f), // No random shift
-       @(DHSGlyphTypesetterRandomShiftLayoutInfoRotationMin) : @(0.0f), // No random shift
-       @(DHSGlyphTypesetterRandomShiftLayoutInfoRotationMax) : @(0.0f), // No random shift
+     @{@(DHSGlyphTypesetterRandomShiftLayoutInfoHorizontalRatioMin) : @0.0f, // No random shift
+       @(DHSGlyphTypesetterRandomShiftLayoutInfoHorizontalRatioMax) : @0.0f, // No random shift
+       @(DHSGlyphTypesetterRandomShiftLayoutInfoVerticalRatioMin) : @0.0f, // No random shift
+       @(DHSGlyphTypesetterRandomShiftLayoutInfoVerticalRatioMax) : @0.0f, // No random shift
+       @(DHSGlyphTypesetterRandomShiftLayoutInfoRotationMin) : @0.0f, // No random shift
+       @(DHSGlyphTypesetterRandomShiftLayoutInfoRotationMax) : @0.0f, // No random shift
        }];
     
     return [NSDictionary dictionaryWithDictionary:info];

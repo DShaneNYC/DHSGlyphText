@@ -225,13 +225,13 @@
     NSMutableDictionary *info = [NSMutableDictionary dictionaryWithDictionary:super.defaultLayoutInfo];
     
     [info addEntriesFromDictionary:
-     @{@(DHSGlyphTypesetterLineLayoutInfoMaxNumberOfLines) : @(0),
+     @{@(DHSGlyphTypesetterLineLayoutInfoMaxNumberOfLines) : @0,
        @(DHSGlyphTypesetterLineLayoutInfoTextAlignment) : @(NSTextAlignmentLeft),
        @(DHSGlyphTypesetterLineLayoutInfoShadowOffset) : [NSValue valueWithCGSize:CGSizeZero],
-       @(DHSGlyphTypesetterLineLayoutInfoStrokeWidth) : @(0.0f),
+       @(DHSGlyphTypesetterLineLayoutInfoStrokeWidth) : @0.0f,
        @(DHSGlyphTypesetterLineLayoutInfoShiftsToShadowOffset) : @(NO),
        @(DHSGlyphTypesetterLineLayoutInfoLineLayoutStyle) : @(DHSGlyphTypesetterLineLayoutStyleCenter),
-       @(DHSGlyphTypesetterLineLayoutInfoLineLayoutStyleMultiplier) : @(1.0f)
+       @(DHSGlyphTypesetterLineLayoutInfoLineLayoutStyleMultiplier) : @1.0f
        }];
     
     return [NSDictionary dictionaryWithDictionary:info];

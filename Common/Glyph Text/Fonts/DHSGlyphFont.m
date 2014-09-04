@@ -122,7 +122,7 @@
             (unsigned long)text.hash ^
             (unsigned long)self.hash ^
             (unsigned long)[[NSValue valueWithCGSize:CGSizeZero] hash] ^
-            (unsigned long)[@(1.0f) hash]
+            (unsigned long)[@1.0f hash]
             ];
 }
 
