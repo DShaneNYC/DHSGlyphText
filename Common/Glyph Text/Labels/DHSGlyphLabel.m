@@ -122,7 +122,7 @@
 - (NSDictionary *)layoutInfo {
     // A subclass must overwrite this method to support the typesetters it uses
     // This method will be called every time just before layout
-    if (self.typesetter == nil) return [NSDictionary dictionary];
+    if (self.typesetter == nil) return @{};
     
     NSMutableDictionary *info = [NSMutableDictionary dictionaryWithDictionary:self.typesetter.layoutInfo];
     
@@ -145,21 +145,21 @@
 #pragma mark -
 #pragma mark Initialization methods
 
-- (id)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
 		[self setDefaults];
     }
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
 		[self setDefaults];
 	}
 	return self;
 }
 
-- (id)init {
+- (instancetype)init {
     if (self = [super init]) {
 		[self setDefaults];
     }
@@ -422,7 +422,7 @@
 }
 
 - (NSString *)keyForPreferredLanguage {
-    return [[NSLocale preferredLanguages] objectAtIndex:0];
+    return [NSLocale preferredLanguages][0];
 }
 
 - (BOOL)setFontName:(NSString *)fontName forKey:(NSString *)key {

@@ -111,7 +111,7 @@
  *
  * @return The ratio of spaces to other characters
  */
-- (CGFloat)spaceRatio;
+@property (NS_NONATOMIC_IOSONLY, readonly) CGFloat spaceRatio;
 
 /**
  * Called by the typesetter to layout the retained text. Subclasses should implement this method to customize the layout and optionally call super.

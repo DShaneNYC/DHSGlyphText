@@ -55,7 +55,7 @@
  *
  * @return The dictionary of parameter keys and values that the typesetter is set to use for layout
  */
-- (NSDictionary *)layoutInfo;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSDictionary *layoutInfo;
 
 /**
  * Only call this if a state change will affect the layout.

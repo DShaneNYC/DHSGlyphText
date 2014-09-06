@@ -52,7 +52,7 @@ DHS_SYNTHESIZE_SINGLETON_FOR_CLASS(DHSGlyphCache);
     [self removeImages:[self count] >> 1];
 }
 
-- (id)init {
+- (instancetype)init {
 	if (self = [super init]) {
         
 		[[NSNotificationCenter defaultCenter] addObserver:self

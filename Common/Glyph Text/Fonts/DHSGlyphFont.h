@@ -64,7 +64,7 @@
  *
  * @return Returns a newly created font instance
  */
-- (id)initWithFontName:(NSString *)fontName andSize:(CGFloat)fontSize;
+- (instancetype)initWithFontName:(NSString *)fontName andSize:(CGFloat)fontSize NS_DESIGNATED_INITIALIZER;
 
 //
 // Size methods
@@ -91,7 +91,7 @@
  *
  * @return Returns the optical bounding box of the space character if it exists in the font
  */
-- (CGSize)spaceSize;
+@property (NS_NONATOMIC_IOSONLY, readonly) CGSize spaceSize;
 
 //
 // Object methods

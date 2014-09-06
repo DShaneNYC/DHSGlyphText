@@ -35,11 +35,11 @@
     DHSTest1Cache *cache = [DHSTest1Cache cache];
     
     // Add too many objects
-    [cache setObject:@1 forKey:@"a"];
-    [cache setObject:@2 forKey:@"b"];
-    [cache setObject:@3 forKey:@"c"];
-    [cache setObject:@4 forKey:@"d"];
-    [cache setObject:@5 forKey:@"e"];
+    cache[@"a"] = @1;
+    cache[@"b"] = @2;
+    cache[@"c"] = @3;
+    cache[@"d"] = @4;
+    cache[@"e"] = @5;
 
     XCTAssertTrue([cache countOfL1Items] == 3, @"There are %d items in the L1 cache", [cache countOfL1Items]);
     XCTAssertTrue([cache countOfL2Items] == 0, @"There are %d items in the L2 cache", [cache countOfL2Items]);
@@ -50,11 +50,11 @@
     DHSTest2Cache *cache = [DHSTest2Cache cache];
     
     // Add too many objects
-    [cache setObject:@1 forKey:@"a"];
-    [cache setObject:@2 forKey:@"b"];
-    [cache setObject:@3 forKey:@"c"];
-    [cache setObject:@4 forKey:@"d"];
-    [cache setObject:@5 forKey:@"e"];
+    cache[@"a"] = @1;
+    cache[@"b"] = @2;
+    cache[@"c"] = @3;
+    cache[@"d"] = @4;
+    cache[@"e"] = @5;
     
     XCTAssertTrue([cache countOfL1Items] == 2, @"There are %d items in the L1 cache", [cache countOfL1Items]);
     XCTAssertTrue([cache countOfL2Items] == 2, @"There are %d items in the L2 cache", [cache countOfL2Items]);
@@ -65,11 +65,11 @@
     DHSTest2Cache *cache = [DHSTest2Cache cache];
     
     // Add too many objects
-    [cache setObject:@1 forKey:@"a"];
-    [cache setObject:@2 forKey:@"b"];
-    [cache setObject:@3 forKey:@"c"];
-    [cache setObject:@4 forKey:@"d"];
-    [cache setObject:@5 forKey:@"e"];
+    cache[@"a"] = @1;
+    cache[@"b"] = @2;
+    cache[@"c"] = @3;
+    cache[@"d"] = @4;
+    cache[@"e"] = @5;
     
     XCTAssertTrue([cache count] == 4, @"There are %d items in the total cache", [cache count]);
     XCTAssertTrue([cache save], @"Cache saved");
@@ -79,12 +79,12 @@
     cache[@"f"] = @6;
     
     XCTAssertTrue([cache count] == 4, @"There are %d items in the total cache", [cache count]);
-    XCTAssertNil([cache objectForKey:@"a"], @"Key 'a' is NOT in the cache");
-    XCTAssertNil([cache objectForKey:@"b"], @"Key 'b' is NOT in the cache");
-    XCTAssertNotNil([cache objectForKey:@"c"], @"Key 'c' is in the cache");
-    XCTAssertNotNil([cache objectForKey:@"d"], @"Key 'd' is in the cache");
-    XCTAssertNotNil([cache objectForKey:@"e"], @"Key 'e' is in the cache");
-    XCTAssertNotNil([cache objectForKey:@"f"], @"Key 'f' is in the cache");
+    XCTAssertNil(cache[@"a"], @"Key 'a' is NOT in the cache");
+    XCTAssertNil(cache[@"b"], @"Key 'b' is NOT in the cache");
+    XCTAssertNotNil(cache[@"c"], @"Key 'c' is in the cache");
+    XCTAssertNotNil(cache[@"d"], @"Key 'd' is in the cache");
+    XCTAssertNotNil(cache[@"e"], @"Key 'e' is in the cache");
+    XCTAssertNotNil(cache[@"f"], @"Key 'f' is in the cache");
 
     [cache clean];
     [cache removeAllObjects];
@@ -95,10 +95,10 @@
     XCTAssertTrue([cache count] == 2, @"There are %d items in the total cache", [cache count]);
     XCTAssertNil(cache[@"a"], @"Key 'a' is NOT in the cache");
     XCTAssertNil(cache[@"b"], @"Key 'b' is NOT in the cache");
-    XCTAssertNotNil([cache objectForKey:@"c"], @"Key 'c' is in the cache");
-    XCTAssertNotNil([cache objectForKey:@"d"], @"Key 'd' is in the cache");
-    XCTAssertNil([cache objectForKey:@"e"], @"Key 'e' is NOT in the cache");
-    XCTAssertNil([cache objectForKey:@"f"], @"Key 'f' is NOT in the cache");
+    XCTAssertNotNil(cache[@"c"], @"Key 'c' is in the cache");
+    XCTAssertNotNil(cache[@"d"], @"Key 'd' is in the cache");
+    XCTAssertNil(cache[@"e"], @"Key 'e' is NOT in the cache");
+    XCTAssertNil(cache[@"f"], @"Key 'f' is NOT in the cache");
 }
 
 @end

@@ -27,10 +27,10 @@
 #import "DHSGlyphTextCommon.h"
 #import "DHSGlyphFont.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DHSGlyphTypesetterLayoutInfo) {
     /// Subclasses should have their own enum types for layout info
     DHSGlyphTypesetterLayoutInfoCount
-} DHSGlyphTypesetterLayoutInfo;
+} ;
 
 @interface DHSGlyphTypesetter : NSObject
 

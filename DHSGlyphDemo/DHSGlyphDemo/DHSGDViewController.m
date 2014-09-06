@@ -35,23 +35,23 @@
 
 #endif // DHSGD_USE_RANDOMSHIFTLABEL
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DHSGlyphDemoButtonLableControlType) {
     DHSGlyphDemoButtonLableControlTypeButton = 0,
     DHSGlyphDemoButtonLableControlTypeLabel
-} DHSGlyphDemoButtonLableControlType;
+} ;
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DHSGlyphDemoGradientFillType) {
     DHSGlyphDemoGradientFillControlTypeNone = 0,
     DHSGlyphDemoGradientFillControlTypeLinear,
     DHSGlyphDemoGradientFillControlTypeRadial
-} DHSGlyphDemoGradientFillType;
+} ;
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DHSGlyphDemoComponentType) {
     DHSGlyphDemoComponentControlTypeFill = 0,
     DHSGlyphDemoComponentControlTypeStroke,
     DHSGlyphDemoComponentControlTypeGlow,
     DHSGlyphDemoComponentControlTypeShadow
-} DHSGlyphDemoComponentType;
+} ;
 
 #define DHSGLYPHDEMO_DEFAULT_FONT_NAME          @"giant_head_regular_tt.ttf"
 #define DHSGLYPHDEMO_CHINESE_FONT_NAME          @"STXINGKA.TTF"

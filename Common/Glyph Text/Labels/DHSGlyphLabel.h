@@ -26,7 +26,7 @@
 #import "DHSGlyphTypesetter.h"
 #import "DHSGlyphFont.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DHSGlyphLabelGlyphRenderOrder) {
     /// Render glyphs from the left on the bottom to the right on top
     DHSGlyphLabelGlyphRenderOrderForwards = 0,
     /// Render glyphs from the right on the bottom to the left on top
@@ -40,7 +40,7 @@ typedef enum {
     /// Render glyphs with the odd indexed on the bottom and even indexes on top
     DHSGlyphLabelGlyphRenderOrderOdd,
     DHSGlyphLabelGlyphRenderOrderCount
-} DHSGlyphLabelGlyphRenderOrder;
+} ;
 
 #define kDHSGlyphDefaultKey         @"default"
 #define kDHSGlyphSystemKey          @"sytem"
@@ -145,14 +145,14 @@ typedef enum {
  *
  * @return Returns the retained \b DHSGlyphFont instance or nil if it is not available for preferred language
  */
-- (DHSGlyphFont *)fontForPreferredLanguage;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) DHSGlyphFont *fontForPreferredLanguage;
 
 /**
  * Get the identifier key for the current system preferred language
  *
  * @return Returns the localized language identifier as defined by the system
  */
-- (NSString *)keyForPreferredLanguage;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *keyForPreferredLanguage;
 
 /**
  * Create a \b DHSGlyphFont instance and set it for a provided identifier and retain it in the label
@@ -261,6 +261,6 @@ typedef enum {
  *
  * @return Returns the rendered image or a cached version if it is available
  */
-- (UIImage *)getImage;
+@property (NS_NONATOMIC_IOSONLY, getter=getImage, readonly, strong) UIImage *image;
 
 @end

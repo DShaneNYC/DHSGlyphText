@@ -103,7 +103,7 @@
     _layoutInfo = [[self class] defaultLayoutInfo];
 }
 
-- (id)init {
+- (instancetype)init {
     if (self = [super init]) {
 		[self setDefaults];
     }
@@ -117,7 +117,7 @@
 + (NSDictionary *)defaultLayoutInfo {
     // Subclasses should not need to overwrite this
 
-    return [NSDictionary dictionary];
+    return @{};
 }
 
 - (void)setLayoutInfo:(NSDictionary *)layoutInfo {

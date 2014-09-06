@@ -24,14 +24,14 @@
 
 #import "DHSGlyphTypesetter.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DHSGlyphTypesetterLineLayoutStyle) {
     /// Line layout style that will center lines in the layout rect based on the default line spacing
     DHSGlyphTypesetterLineLayoutStyleCenter = 0,
     /// Line layout style that will spread lines in the layout rect based on the default line spacing and a line layout style multiplier
     DHSGlyphTypesetterLineLayoutStyleSpread
-} DHSGlyphTypesetterLineLayoutStyle;
+} ;
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DHSGlyphTypesetterLineLayoutInfo) {
     /// The maximum number of lines that will be laid out or zero for no maximum
     DHSGlyphTypesetterLineLayoutInfoMaxNumberOfLines,
     /// The NSTextAlignment of the layout style (e.g. left, center, right)
@@ -47,7 +47,7 @@ typedef enum {
     /// How much the gap between lines in multi-line text should be adjusted
     DHSGlyphTypesetterLineLayoutInfoLineLayoutStyleMultiplier,
     DHSGlyphTypesetterLineLayoutInfoCount
-} DHSGlyphTypesetterLineLayoutInfo;
+} ;
 
 @interface DHSGlyphTypesetterLine : DHSGlyphTypesetter
 

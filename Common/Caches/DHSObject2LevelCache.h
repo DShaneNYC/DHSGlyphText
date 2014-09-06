@@ -53,10 +53,10 @@
 #ifdef DEBUG
 // For debugging only
 - (void)setUnsaved;             // metadata is unsaved
-- (NSInteger)countOfL1Keys;
-- (NSInteger)countOfL2Keys;
-- (NSInteger)countOfL1Items;
-- (NSInteger)countOfL2Items;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSInteger countOfL1Keys;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSInteger countOfL2Keys;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSInteger countOfL1Items;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSInteger countOfL2Items;
 #endif // DEBUG
 
 // Subclassing methods
@@ -67,7 +67,7 @@
  *
  * @return The name of the single component subdirectory to use
  */
-- (NSString *)pathComponentName;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *pathComponentName;
 
 /**
  * The default number of items to store in the L1 (in memory) portion of the cache
@@ -108,7 +108,7 @@
  *
  * @return Whether or not the save operation succeeded
  */
-- (BOOL)save;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL save;
 
 /**
  * Load the cache index metadata from a restoration file.
@@ -119,7 +119,7 @@
  *
  * @return Whether or not the load operation succeeded
  */
-- (BOOL)load;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL load;
 
 /**
  * Delete some (or all) of the low priority items in the cache, in memory or on disk.
@@ -142,7 +142,7 @@
  *
  * @return The number of items
  */
-- (NSInteger)count;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSInteger count;
 
 /**
  * Delete an item from the cache, in memory or on disk.

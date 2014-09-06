@@ -41,7 +41,7 @@
  *
  * @return Returns a new, empty button instance
  */
-+ (id)button;
++ (instancetype)button;
 
 /**
  * Create a button instance by overloading the \b UIButton version of this method
@@ -50,7 +50,7 @@
  *
  * @return Returns a new, empty button instance by calling \b + \b (id)button
  */
-+ (id)buttonWithType:(UIButtonType)buttonType;
++ (instancetype)buttonWithType:(UIButtonType)buttonType;
 
 
 #pragma mark -
@@ -130,14 +130,13 @@
  *
  * @return Returns \b YES if the images will be cached or \b NO if not
  */
-- (BOOL)shouldCache;
+@property (NS_NONATOMIC_IOSONLY) BOOL shouldCache;
 
 /**
  * Sets whether the button labels should save rendered images for a particular set of parameters in a cache
  *
  * @param shouldCache the state of caching
  */
-- (void)setShouldCache:(BOOL)shouldCache;
 
 /**
  * Button label images are lazy rendered at the last possible moment after all parameters have been set.

@@ -40,11 +40,11 @@
 #pragma mark -
 #pragma mark Class Initialization methods
 
-+ (id)button {
++ (instancetype)button {
     return [[self alloc] initWithFrame:CGRectZero];
 }
 
-+ (id)buttonWithType:(UIButtonType)buttonType {
++ (instancetype)buttonWithType:(UIButtonType)buttonType {
     return [self button];
 }
 
@@ -83,19 +83,16 @@
     [selected setNumberOfLines:0];
 
 	// Create the object
-	_states = [NSDictionary dictionaryWithObjectsAndKeys:
-			  // UIControlStateNormal (and all non-specified)
-			  normal, [NSNumber numberWithInt:UIControlStateNormal],
+	_states = @{@(UIControlStateNormal): normal,
 
 			  // UIControlStateHighlighted
-			  highlighted, [NSNumber numberWithInt:UIControlStateHighlighted],
+			  @(UIControlStateHighlighted): highlighted,
 
 			  // UIControlStateDisabled
-			  disabled, [NSNumber numberWithInt:UIControlStateDisabled],
+			  @(UIControlStateDisabled): disabled,
 
 			  // UIControlStateSelected
-			  selected, [NSNumber numberWithInt:UIControlStateSelected],
-			  nil];
+			  @(UIControlStateSelected): selected};
 			   
 	
 	//
@@ -108,7 +105,7 @@
 		[self setTitleColor:[self titleColorForState:[key intValue]] forState:[key intValue]];
 		[self setTitleShadowColor:[self titleShadowColorForState:[key intValue]] forState:[key intValue]];
 		
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setTextAlignment:NSTextAlignmentCenter];
 	}
 
@@ -134,7 +131,7 @@
 	[self setShiftsToShadowOffset:YES forState:UIControlStateSelected];
 }
 
-- (id)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
 		[self setupStates];
         [self setDefaults];
@@ -142,7 +139,7 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
 		[self setupStates];
         [self setDefaults];
@@ -150,7 +147,7 @@
 	return self;
 }
 
-- (id)init {
+- (instancetype)init {
     if (self = [super init]) {
 		[self setupStates];
         [self setDefaults];
@@ -164,10 +161,10 @@
 
 /*
 - (NSString *)titleForState:(UIControlState)state {
-    NSString *title = [[_states objectForKey:[NSNumber numberWithInt:state]] text];
+    NSString *title = [[_states objectForKey:[NSNumber numberWithUnsignedLong:(NSUInteger)state]] text];
     
     if ([title length] > 0) return title;
-    else return [[_states objectForKey:[NSNumber numberWithInt:UIControlStateNormal]] text];
+    else return [[_states objectForKey:[NSNumber numberWithUnsignedLong:UIControlStateNormal]] text];
 }
 */
 
@@ -176,7 +173,7 @@
 	
     // Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setText:title];
 	}
 	
@@ -187,14 +184,14 @@
 - (void)setTitle:(NSString *)title forState:(UIControlState)state {
 	[super setTitle:nil forState:state];
 	
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setText:title];
 	[self setImage:[label getImage] forState:state];
 
 	if (state == UIControlStateNormal) {
 		// Set title for all other blank states when normal is set
 		for (NSNumber *key in _states) {
-			DHSGlyphLabel *label = [_states objectForKey:key];
+			DHSGlyphLabel *label = _states[key];
             [label setText:title];
             [self setImage:[label getImage] forState:[key intValue]];
 		}
@@ -202,7 +199,7 @@
 	} else {
 		// Set state's title to normal title if it is nil (but not empty)
 		if (label.text == nil) {
-			DHSGlyphLabel *normalLabel = [_states objectForKey:[NSNumber numberWithInt:UIControlStateNormal]];
+			DHSGlyphLabel *normalLabel = _states[@(UIControlStateNormal)];
 			[label setText:normalLabel.text];
 			[self setImage:[label getImage] forState:state];
 		}
@@ -212,7 +209,7 @@
 - (void)setTitleColor:(UIColor *)color {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setTextColor:color];
 	}
 	
@@ -223,7 +220,7 @@
 - (void)setTitleColor:(UIColor *)color forState:(UIControlState)state {
 	[super setTitleColor:color forState:state];
 	
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setTextColor:color];
 
 	[self setImage:[label getImage] forState:state];
@@ -232,7 +229,7 @@
 - (void)setTitleShadowColor:(UIColor *)color {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setShadowColor:color];
 	}
 	
@@ -243,7 +240,7 @@
 - (void)setTitleShadowColor:(UIColor *)color forState:(UIControlState)state {
 	[super setTitleShadowColor:color forState:state];
 	
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setShadowColor:color];
 
 	[self setImage:[label getImage] forState:state];
@@ -254,7 +251,7 @@
 
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setNeedsDisplay];
 	}
 	
@@ -266,7 +263,7 @@
 #pragma mark Label Access methods
 
 - (DHSGlyphLabel *)glyphLabelForState:(UIControlState)state {
-	return [_states objectForKey:[NSNumber numberWithInt:state]];
+	return _states[@((NSUInteger)state)];
 }
 
 - (BOOL)shouldCache {
@@ -277,7 +274,7 @@
 - (void)setShouldCache:(BOOL)shouldCache {
     // Set for all states
     for (NSNumber *key in _states) {
-        DHSGlyphLabel *label = [_states objectForKey:key];
+        DHSGlyphLabel *label = _states[key];
         [label setShouldCache:shouldCache];
     }
 }
@@ -287,7 +284,7 @@
     if (_needsUpdate) {
         // Set for all states
         for (NSNumber *key in _states) {
-            DHSGlyphLabel *label = [_states objectForKey:key];
+            DHSGlyphLabel *label = _states[key];
             [self setImage:[label getImage] forState:[key intValue]];
         }
         _needsUpdate = NO;
@@ -308,7 +305,7 @@
 	
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setFont:font];
 	}
 	
@@ -318,7 +315,7 @@
 - (void)setFontName:(NSString *)fontName forKey:(NSString *)key {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setFontName:fontName forKey:key];
 	}
 
@@ -326,7 +323,7 @@
 }
 
 - (void)setFontName:(NSString *)fontName forKey:(NSString *)key forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setFontName:fontName forKey:key];
 
 	[self setImages];
@@ -344,7 +341,7 @@
 - (void)setFontSize:(CGFloat)fontSize {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setFontSize:fontSize];
 	}
     
@@ -354,7 +351,7 @@
 - (void)setFontSize:(CGFloat)fontSize forKey:(NSString *)key {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setFontSize:fontSize forKey:key];
 	}
 
@@ -362,7 +359,7 @@
 }
 
 - (void)setFontSize:(CGFloat)fontSize forKey:(NSString *)key forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setFontSize:fontSize forKey:key];
 
 	[self setImages];
@@ -372,7 +369,7 @@
 - (void)setFontScaleFactor:(CGPoint)fontScaleFactor {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setFontScaleFactor:fontScaleFactor];
 	}
 	
@@ -382,7 +379,7 @@
 - (void)setFontScaleFactor:(CGPoint)fontScaleFactor forKey:(NSString *)key {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setFontScaleFactor:fontScaleFactor forKey:key];
 	}
 	
@@ -390,7 +387,7 @@
 }
 
 - (void)setFontScaleFactor:(CGPoint)fontScaleFactor forKey:(NSString *)key forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setFontScaleFactor:fontScaleFactor forKey:key];
 	
 	[self setImages];
@@ -400,7 +397,7 @@
 - (void)setFontDescenderRatio:(CGFloat)fontDescenderRatio {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setFontDescenderRatio:fontDescenderRatio];
 	}
 	
@@ -411,7 +408,7 @@
 - (void)setFontDescenderRatio:(CGFloat)fontDescenderRatio forKey:(NSString *)key {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setFontDescenderRatio:fontDescenderRatio forKey:key];
 	}
 	
@@ -420,7 +417,7 @@
 }
 
 - (void)setFontDescenderRatio:(CGFloat)fontDescenderRatio forKey:(NSString *)key forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setFontDescenderRatio:fontDescenderRatio forKey:key];
 	
 	[self setImages];
@@ -430,7 +427,7 @@
 - (void)setFontGlyphExpansionMultiplier:(CGFloat)fontGlyphExpansionMultiplier {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
         [label setFontGlyphExpansionMultiplier:fontGlyphExpansionMultiplier];
 	}
     
@@ -440,7 +437,7 @@
 - (void)setFontGlyphExpansionMultiplier:(CGFloat)fontGlyphExpansionMultiplier forKey:(NSString *)key {
 	// Set for all states
 	for (NSNumber *state in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:state];
+		DHSGlyphLabel *label = _states[state];
 		[label setFontGlyphExpansionMultiplier:fontGlyphExpansionMultiplier forKey:key];
 	}
 	
@@ -449,7 +446,7 @@
 }
 
 - (void)setFontGlyphExpansionMultiplier:(CGFloat)fontGlyphExpansionMultiplier forKey:(NSString *)key forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setFontGlyphExpansionMultiplier:fontGlyphExpansionMultiplier];
     
 	[self setImages];
@@ -463,7 +460,7 @@
 - (void)setStrokeColor:(UIColor *)strokeColor {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setStrokeColor:strokeColor];
 	}
 
@@ -471,7 +468,7 @@
 }
 
 - (void)setStrokeColor:(UIColor *)strokeColor forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setStrokeColor:strokeColor];
 
 	[self setImages];
@@ -481,7 +478,7 @@
 - (void)setStrokeWidth:(CGFloat)strokeWidth {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setStrokeWidth:strokeWidth];
 	}
 
@@ -489,7 +486,7 @@
 }
 
 - (void)setStrokeWidth:(CGFloat)strokeWidth forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setStrokeWidth:strokeWidth];
 
 	[self setImages];
@@ -499,7 +496,7 @@
 - (void)setShadowOffset:(CGSize)shadowOffset {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setShadowOffset:shadowOffset];
 	}
 
@@ -507,7 +504,7 @@
 }
 
 - (void)setShadowOffset:(CGSize)shadowOffset forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setShadowOffset:shadowOffset];
 
 	[self setImages];
@@ -517,7 +514,7 @@
 - (void)setShadowBlur:(CGFloat)shadowBlur {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setShadowBlur:shadowBlur];
 	}
 
@@ -525,7 +522,7 @@
 }
 
 - (void)setShadowBlur:(CGFloat)shadowBlur forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setShadowBlur:shadowBlur];
 
 	[self setImages];
@@ -535,7 +532,7 @@
 - (void)setStrokeHasShadow:(BOOL)strokeHasShadow {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setStrokeHasShadow:strokeHasShadow];
 	}
     
@@ -543,7 +540,7 @@
 }
 
 - (void)setStrokeHasShadow:(BOOL)strokeHasShadow forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
     [label setStrokeHasShadow:strokeHasShadow];
     
 	[self setImages];
@@ -553,7 +550,7 @@
 - (void)setShiftsToShadowOffset:(BOOL)shifts {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setShiftsToShadowOffset:shifts];
 	}
     
@@ -561,7 +558,7 @@
 }
 
 - (void)setShiftsToShadowOffset:(BOOL)shifts forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setShiftsToShadowOffset:shifts];
     
 	[self setImages];
@@ -571,7 +568,7 @@
 - (void)setGlowColor:(UIColor *)glowColor {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setGlowColor:glowColor];
 	}
 	
@@ -579,7 +576,7 @@
 }
 
 - (void)setGlowColor:(UIColor *)glowColor forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setGlowColor:glowColor];
 	
 	[self setImages];
@@ -589,7 +586,7 @@
 - (void)setGlowBlur:(CGFloat)glowBlur {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setGlowBlur:glowBlur];
 	}
 	
@@ -597,7 +594,7 @@
 }
 
 - (void)setGlowBlur:(CGFloat)glowBlur forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setGlowBlur:glowBlur];
 	
 	[self setImages];
@@ -607,7 +604,7 @@
 - (void)setGradient:(CGGradientRef)gradient {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setGradient:gradient];
 	}
 	
@@ -615,7 +612,7 @@
 }
 
 - (void)setGradient:(CGGradientRef)gradient forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setGradient:gradient];
 	
 	[self setImages];
@@ -625,7 +622,7 @@
 - (void)setRadialGradient:(BOOL)radialGradient {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setRadialGradient:radialGradient];
 	}
 	
@@ -633,7 +630,7 @@
 }
 
 - (void)setRadialGradient:(BOOL)radialGradient forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
     [label setRadialGradient:radialGradient];
 	
 	[self setImages];
@@ -643,7 +640,7 @@
 - (void)setShowIndividualGlyphStroke:(BOOL)showIndividualGlyphStroke {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setShowIndividualGlyphStroke:showIndividualGlyphStroke];
 	}
 	
@@ -651,7 +648,7 @@
 }
 
 - (void)setShowIndividualGlyphStroke:(BOOL)showIndividualGlyphStroke forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
     [label setShowIndividualGlyphStroke:showIndividualGlyphStroke];
 	
 	[self setImages];
@@ -661,7 +658,7 @@
 - (void)setShowIndividualGlyphGlow:(BOOL)showIndividualGlyphGlow {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setShowIndividualGlyphGlow:showIndividualGlyphGlow];
 	}
 	
@@ -669,7 +666,7 @@
 }
 
 - (void)setShowIndividualGlyphGlow:(BOOL)showIndividualGlyphGlow forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
     [label setShowIndividualGlyphGlow:showIndividualGlyphGlow];
 	
 	[self setImages];
@@ -679,7 +676,7 @@
 - (void)setGlyphRenderOrder:(DHSGlyphLabelGlyphRenderOrder)glyphRenderOrder {
 	// Set for all states
 	for (NSNumber *key in _states) {
-		DHSGlyphLabel *label = [_states objectForKey:key];
+		DHSGlyphLabel *label = _states[key];
 		[label setGlyphRenderOrder:glyphRenderOrder];
 	}
 	
@@ -687,7 +684,7 @@
 }
 
 - (void)setGlyphRenderOrder:(DHSGlyphLabelGlyphRenderOrder)glyphRenderOrder forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
     [label setGlyphRenderOrder:glyphRenderOrder];
 	
 	[self setImages];
@@ -699,7 +696,7 @@
 #pragma mark Label Display Rendering Parameter methods
 
 - (void)setAlpha:(CGFloat)alpha forState:(UIControlState)state {
-	DHSGlyphLabel *label = [_states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = _states[@((NSUInteger)state)];
 	[label setAlpha:alpha];
 
 	[self setImages];

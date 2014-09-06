@@ -62,19 +62,19 @@
 }
 
 - (UIImage *)imageForHash:(NSString *)hashKey {
-    return (UIImage *)[self objectForKey:hashKey];
+    return (UIImage *)self[hashKey];
 }
 
 - (UIImage *)imageForKey:(NSString *)key {
-    return (UIImage *)[self objectForKey:key];
+    return (UIImage *)self[key];
 }
 
 - (void)setImage:(UIImage *)image forHash:(NSString *)hashKey {
-    [self setObject:image forKey:hashKey];
+    self[hashKey] = image;
 }
 
 - (void)setImage:(UIImage *)image forKey:(NSString *)key {
-    [self setObject:image forKey:key];
+    self[key] = image;
 }
 
 - (void)setObject:(id<NSCoding>)object forKey:(NSString *)key {

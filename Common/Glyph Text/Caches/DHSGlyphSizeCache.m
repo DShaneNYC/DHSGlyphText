@@ -59,11 +59,11 @@ DHS_SYNTHESIZE_SINGLETON_FOR_CLASS(DHSGlyphSizeCache);
 }
 
 - (CGSize)sizeForHash:(NSString *)hashKey {
-    return [(NSValue *)[self objectForKey:hashKey] CGSizeValue];
+    return [(NSValue *)self[hashKey] CGSizeValue];
 }
 
 - (void)setSize:(CGSize)size forHash:(NSString *)hashKey {
-    [self setObject:[NSValue valueWithCGSize:size] forKey:hashKey];
+    self[hashKey] = [NSValue valueWithCGSize:size];
 }
 
 - (void)setObject:(id<NSCoding>)object forKey:(NSString *)key {

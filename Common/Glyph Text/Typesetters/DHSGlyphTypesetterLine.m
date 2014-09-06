@@ -66,13 +66,13 @@
 		// Make a line
 		while (lastLetter < [text length]) {
 			// Add the next word
-			width += [[charSizes objectAtIndex:lastLetter] floatValue];
+			width += [charSizes[lastLetter] floatValue];
 			glyphCount++;
 			
 			// Check if the string is too long
 			if ((lastLetter > firstLetter) && (width > size.width)) {
 				// If it is, remove the last character
-                maxLineWidth = MAX(maxLineWidth, width - [[charSizes objectAtIndex:lastLetter] floatValue]);
+                maxLineWidth = MAX(maxLineWidth, width - [charSizes[lastLetter] floatValue]);
 				glyphCount--;
 				break;
 			}
@@ -83,8 +83,8 @@
 		
 		// Make the entry for the line
 		// first == first index, last == last index + 1
-		[firstList addObject:[NSNumber numberWithLong:lineFirstGlyph]];
-		[lastList addObject:[NSNumber numberWithLong:lineFirstGlyph + glyphCount + 1]];
+		[firstList addObject:@(lineFirstGlyph)];
+		[lastList addObject:@(lineFirstGlyph + glyphCount + 1)];
 		lineFirstGlyph = lineFirstGlyph + glyphCount;
 		firstLetter = lastLetter;
         if (maxLineWidth == 0.0f) maxLineWidth = width;
@@ -157,13 +157,13 @@
 		// Make a line
 		while (lastWord < [words count]) {
 			// Add the next word
-			width += [[wordSizes objectAtIndex:lastWord] floatValue];
-			glyphCount += [[words objectAtIndex:lastWord] length];
+			width += [wordSizes[lastWord] floatValue];
+			glyphCount += [words[lastWord] length];
 			
             // New line
-            if ([[words objectAtIndex:lastWord] isEqualToString:DHSGLYPHTYPESETTER_LINE_DELIMITER]) {
-                maxLineWidth = MAX(maxLineWidth, width - [[wordSizes objectAtIndex:lastWord] floatValue]);
-				glyphCount -= [[words objectAtIndex:lastWord] length];
+            if ([words[lastWord] isEqualToString:DHSGLYPHTYPESETTER_LINE_DELIMITER]) {
+                maxLineWidth = MAX(maxLineWidth, width - [wordSizes[lastWord] floatValue]);
+				glyphCount -= [words[lastWord] length];
                 lastWord++;
                 break;
             }
@@ -171,8 +171,8 @@
 			// Check if the line is too long
 			if ((lastWord > firstWord) && (width > size.width)) {
 				// If it is, remove the last word
-                maxLineWidth = MAX(maxLineWidth, width - [[wordSizes objectAtIndex:lastWord] floatValue]);
-				glyphCount -= [[words objectAtIndex:lastWord] length];
+                maxLineWidth = MAX(maxLineWidth, width - [wordSizes[lastWord] floatValue]);
+				glyphCount -= [words[lastWord] length];
 				break;
 			}
 			
@@ -186,8 +186,8 @@
 		
 		// Make the entry for the line
 		// first == first index, last == last index + 1
-		[firstList addObject:[NSNumber numberWithLong:lineFirstGlyph]];
-		[lastList addObject:[NSNumber numberWithLong:lineFirstGlyph + glyphCount + 1]];
+		[firstList addObject:@(lineFirstGlyph)];
+		[lastList addObject:@(lineFirstGlyph + glyphCount + 1)];
 		lineFirstGlyph = lineFirstGlyph + glyphCount + 1;
 		firstWord = lastWord;
         if (maxLineWidth == 0.0f) maxLineWidth = width;
@@ -383,8 +383,8 @@
     debugLog(@"numPoints = %lu * %lu (%@)", sizeof(CGPoint), (unsigned long)text.length, text);
     NSInteger i = 0;
 	while (i < numLines) {
-		NSInteger firstGlyph = [[firstList objectAtIndex:i] intValue];
-		NSInteger lastGlyph = [[lastList objectAtIndex:i] intValue];
+		NSInteger firstGlyph = [firstList[i] intValue];
+		NSInteger lastGlyph = [lastList[i] intValue];
 		NSInteger length = lastGlyph - firstGlyph - 1;
 		debugLog(@"Line %ld from %ld to %ld (%@)", (long)i, (long)firstGlyph, (long)lastGlyph - 1, [text substringWithRange:NSMakeRange(firstGlyph, length)]);
         

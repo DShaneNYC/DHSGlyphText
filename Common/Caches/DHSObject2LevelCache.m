@@ -56,7 +56,7 @@
 	[self save];
 }
 
-- (id)init {
+- (instancetype)init {
 	if (self = [super init]) {
         
 		[[NSNotificationCenter defaultCenter] addObserver:self
@@ -116,7 +116,7 @@
     __block NSInteger switchCount = 0;
     
     [_orderedKeyList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        BOOL currentIsNull = [[_cacheItems objectForKey:obj] isKindOfClass:[NSNull class]] ? YES : NO;
+        BOOL currentIsNull = [_cacheItems[obj] isKindOfClass:[NSNull class]] ? YES : NO;
         if (lastIsNull != currentIsNull) ++switchCount;
         lastIsNull = currentIsNull;
     }];
@@ -135,7 +135,7 @@
     
     NSArray *keys = [_cacheItems allKeys];
     [keys enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
-        if ([[_cacheItems objectForKey:key] isKindOfClass:[NSNull class]] &&
+        if ([_cacheItems[key] isKindOfClass:[NSNull class]] &&
             [files indexOfObject:key] != NSNotFound) {
             ++count;
         }
@@ -149,7 +149,7 @@
     
     NSArray *keys = [_cacheItems allKeys];
     [keys enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
-        if ([[_cacheItems objectForKey:key] isKindOfClass:[NSNull class]] == NO) {
+        if ([_cacheItems[key] isKindOfClass:[NSNull class]] == NO) {
             ++count;
         }
     }];
@@ -236,7 +236,7 @@
     // Remove keys that have no cache items
     NSArray *keyListRef = [_orderedKeyList copy];
     [keyListRef enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
-        if ([_cacheItems objectForKey:key] == nil) {
+        if (_cacheItems[key] == nil) {
             [_orderedKeyList removeObject:key];
         }
     }];
@@ -245,7 +245,7 @@
     NSArray *files = [self keyFilesInObjectCachePath];
     [files enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
         NSError *error;
-        if ([_cacheItems objectForKey:key] == nil ||
+        if (_cacheItems[key] == nil ||
             [_orderedKeyList indexOfObject:key] == NSNotFound) {
             
             [[NSFileManager defaultManager] removeItemAtPath:[self pathWithkey:key] error:&error];
@@ -257,7 +257,7 @@
     // Remove L2 files whose objects are in the L1 cache
     [files enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
         NSError *error;
-        if ([[_cacheItems objectForKey:key] isKindOfClass:[NSNull class]] == NO) {
+        if ([_cacheItems[key] isKindOfClass:[NSNull class]] == NO) {
             [[NSFileManager defaultManager] removeItemAtPath:[self pathWithkey:key] error:&error];
         }
     }];
@@ -265,7 +265,7 @@
     // Remove cache items that are NULL but have no files
     NSArray *keys = [_cacheItems allKeys];
     [keys enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
-        if ([[_cacheItems objectForKey:key] isKindOfClass:[NSNull class]] &&
+        if ([_cacheItems[key] isKindOfClass:[NSNull class]] &&
             [files indexOfObject:key] == NSNotFound) {
             
             [_orderedKeyList removeObject:key];
@@ -317,7 +317,7 @@
         __block BOOL success = YES;
         
         [_orderedKeyList enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
-            id obj = [_cacheItems objectForKey:key];
+            id obj = _cacheItems[key];
             if ([obj isKindOfClass:[NSNull class]] == NO &&
                 [self sendToLevel2Object:obj forKey:key] == NO) {
                 // Failure
@@ -330,11 +330,9 @@
         if (success == NO) return NO;
         
         // Overwrite existing saved cache index
-        NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:
-                              _orderedKeyList, @"_orderedKeyList",
-                              [NSNumber numberWithLong:_cacheMaxItemsSize], @"_cacheMaxItemsSize",
-                              [NSNumber numberWithLong:_cacheLevel1Size], @"_cacheLevel1Size",
-                              nil];
+        NSDictionary *dict = @{@"_orderedKeyList": _orderedKeyList,
+                              @"_cacheMaxItemsSize": @(_cacheMaxItemsSize),
+                              @"_cacheLevel1Size": @(_cacheLevel1Size)};
         NSString *saveFile = [self pathWithkey:DHSObject2LevelCacheIndexFileName];
         BOOL result = [NSKeyedArchiver archiveRootObject:dict toFile:saveFile];
         if (result) {
@@ -360,9 +358,9 @@
         
         NSString *saveFile = [self pathWithkey:DHSObject2LevelCacheIndexFileName];
         NSDictionary *dict = [NSKeyedUnarchiver unarchiveObjectWithFile:saveFile];
-        NSMutableArray *newKeyList = [dict objectForKey:@"_orderedKeyList"];
-        NSInteger cacheMaxItemsSize = [[dict objectForKey:@"_cacheMaxItemsSize"] intValue];
-        NSInteger cacheLevel1Size = [[dict objectForKey:@"_cacheLevel1Size"] intValue];
+        NSMutableArray *newKeyList = dict[@"_orderedKeyList"];
+        NSInteger cacheMaxItemsSize = [dict[@"_cacheMaxItemsSize"] intValue];
+        NSInteger cacheLevel1Size = [dict[@"_cacheLevel1Size"] intValue];
         if (newKeyList == nil) return NO;
         
         _cacheItems = nil;
@@ -383,11 +381,11 @@
                 NSInteger level1StartIndex = cacheMaxItemsSize - cacheLevel1Size;
                 if (idx >= level1StartIndex) {
                     // Level 1 object
-                    [_cacheItems setObject:obj forKey:key];
+                    _cacheItems[key] = obj;
                     [self removeFromLevel2ObjectForKey:key];
                 } else {
                     // Level 2 object
-                    [_cacheItems setObject:[NSNull null] forKey:key];
+                    _cacheItems[key] = [NSNull null];
                 }
             }
         }];
@@ -416,14 +414,14 @@
         } else {
             // Get rid of some cache items
             for (NSInteger i = 0; i < numItems; ++i) {
-                NSString *key = [_orderedKeyList objectAtIndex:i];
+                NSString *key = _orderedKeyList[i];
                 
-                if ([[_cacheItems objectForKey:key] isKindOfClass:[NSNull class]]) {
+                if ([_cacheItems[key] isKindOfClass:[NSNull class]]) {
                     // L2
                     [self removeFromLevel2ObjectForKey:key];
                 } else if (_delegate) {
                     // L1
-                    id<NSCoding> obj = [_cacheItems objectForKey:key];
+                    id<NSCoding> obj = _cacheItems[key];
                     if (obj) [_delegate DHScache:self willEvictObject:obj forKey:key];
                 }
                 
@@ -464,12 +462,12 @@
         
         // Get rid of cache items
         for (NSInteger i = 0; i < removeCount; ++i) {
-            NSString *key = [_orderedKeyList objectAtIndex:i];
-            id obj = [_cacheItems objectForKey:key];
+            NSString *key = _orderedKeyList[i];
+            id obj = _cacheItems[key];
             
             if ([obj isKindOfClass:[NSNull class]] == NO) {
                 [self sendToLevel2Object:obj forKey:key];
-                [_cacheItems setObject:[NSNull null] forKey:key];
+                _cacheItems[key] = [NSNull null];
             }
         }
         
@@ -504,12 +502,12 @@
     if ([_orderedKeyList count] > _cacheLevel1Size) {
         NSInteger max = [_orderedKeyList count] - _cacheLevel1Size;
         for (NSInteger i = 0; i < max; ++i) {
-            NSString *killKey = [_orderedKeyList objectAtIndex:i];
-            id obj = [_cacheItems objectForKey:killKey];
+            NSString *killKey = _orderedKeyList[i];
+            id obj = _cacheItems[killKey];
             
             if ([obj isKindOfClass:[NSNull class]] == NO) {
                 [self sendToLevel2Object:obj forKey:killKey];
-                [_cacheItems setObject:[NSNull null] forKey:killKey];
+                _cacheItems[killKey] = [NSNull null];
             }
             
             _saved = NO;
@@ -521,14 +519,14 @@
     // See if the whole cache is full
 	while ([_orderedKeyList count] > _cacheMaxItemsSize) {
 		// It is, so kill the top one
-        NSString *killKey = [_orderedKeyList objectAtIndex:0];
+        NSString *killKey = _orderedKeyList[0];
         
-        if ([[_cacheItems objectForKey:killKey] isKindOfClass:[NSNull class]]) {
+        if ([_cacheItems[killKey] isKindOfClass:[NSNull class]]) {
             // L2
             [self removeFromLevel2ObjectForKey:killKey];
         } else if (_delegate) {
             // L1
-            id<NSCoding> obj = [_cacheItems objectForKey:killKey];
+            id<NSCoding> obj = _cacheItems[killKey];
             if (obj) [_delegate DHScache:self willEvictObject:obj forKey:killKey];
         }
         
@@ -546,7 +544,7 @@
     @synchronized(self) {
         // NSLog(@"del %@: %@", NSStringFromClass([self class]), [self description]);
 
-        if ([[_cacheItems objectForKey:key] isKindOfClass:[NSNull class]]) {
+        if ([_cacheItems[key] isKindOfClass:[NSNull class]]) {
             [self removeFromLevel2ObjectForKey:key];
         }
         [_cacheItems removeObjectForKey:key];
@@ -562,7 +560,7 @@
     @synchronized(self) {
         // NSLog(@"get %@: %@", NSStringFromClass([self class]), [self description]);
         
-        id obj = [_cacheItems objectForKey:key];
+        id obj = _cacheItems[key];
         if (obj == nil) return nil;
         
         // Move the key to the end so it won't be as likely to be removed
@@ -574,7 +572,7 @@
             obj = [self retrieveFromLevel2ObjectForKey:key];
             if (obj) {
                 // Put it in the level 1 area
-                [_cacheItems setObject:obj forKey:key];
+                _cacheItems[key] = obj;
                 [self removeFromLevel2ObjectForKey:key];
             } else {
                 // Doesn't exist so get rit of it
@@ -598,11 +596,11 @@
         if (object == nil) return;
         
         // See if the item exists
-        id obj = [_cacheItems objectForKey:key];
+        id obj = _cacheItems[key];
         if (obj) [_orderedKeyList removeObject:key];
         
         // Add the new one to the end
-        [_cacheItems setObject:object forKey:key];
+        _cacheItems[key] = object;
         [_orderedKeyList addObject:key];
         
         [self pruneLevel2Cache];

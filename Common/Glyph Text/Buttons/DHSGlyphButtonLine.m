@@ -43,7 +43,7 @@
 - (void)setLineLayoutStyle:(DHSGlyphTypesetterLineLayoutStyle)lineLayoutStyle {
 	// Set for all states
 	for (NSNumber *key in self.states) {
-		DHSGlyphLabel *label = [self.states objectForKey:key];
+		DHSGlyphLabel *label = (self.states)[key];
         [(DHSGlyphLabelLine *)label setLineLayoutStyle:lineLayoutStyle];
 	}
     
@@ -51,7 +51,7 @@
 }
 
 - (void)setLineLayoutStyle:(DHSGlyphTypesetterLineLayoutStyle)lineLayoutStyle forState:(UIControlState)state {
-	DHSGlyphLabel *label = [self.states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = (self.states)[@((NSUInteger)state)];
     [(DHSGlyphLabelLine *)label setLineLayoutStyle:lineLayoutStyle];
     
 	[self setImages];
@@ -61,7 +61,7 @@
 - (void)setLineLayoutStyleMultiplier:(CGFloat)lineLayoutStyleMultiplier {
 	// Set for all states
 	for (NSNumber *key in self.states) {
-		DHSGlyphLabel *label = [self.states objectForKey:key];
+		DHSGlyphLabel *label = (self.states)[key];
         [(DHSGlyphLabelLine *)label setLineLayoutStyleMultiplier:lineLayoutStyleMultiplier];
 	}
     
@@ -69,7 +69,7 @@
 }
 
 - (void)setLineLayoutStyleMultiplier:(CGFloat)lineLayoutStyleMultiplier forState:(UIControlState)state {
-	DHSGlyphLabel *label = [self.states objectForKey:[NSNumber numberWithInt:state]];
+	DHSGlyphLabel *label = (self.states)[@((NSUInteger)state)];
 	[(DHSGlyphLabelLine *)label setLineLayoutStyleMultiplier:lineLayoutStyleMultiplier];
     
 	[self setImages];

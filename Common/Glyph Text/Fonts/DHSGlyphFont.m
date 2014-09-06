@@ -33,7 +33,7 @@
 #pragma mark -
 #pragma mark Initialization methods
 
-- (id)initWithFontName:(NSString *)fontName andSize:(CGFloat)fontSize {
+- (instancetype)initWithFontName:(NSString *)fontName andSize:(CGFloat)fontSize {
     self = [super init];
     if (self) {
         _shouldCache = YES;

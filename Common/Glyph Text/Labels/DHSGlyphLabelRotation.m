@@ -46,7 +46,7 @@
 - (NSDictionary *)layoutInfo {
     // A subclass must overwrite this method to support the typesetters it uses
     // This method will be called every time just before layout
-    if (self.typesetter == nil) return [NSDictionary dictionary];
+    if (self.typesetter == nil) return @{};
     
     NSMutableDictionary *info = [NSMutableDictionary dictionaryWithDictionary:self.typesetter.layoutInfo];
     

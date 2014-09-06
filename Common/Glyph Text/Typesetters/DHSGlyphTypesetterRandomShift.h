@@ -24,7 +24,7 @@
 
 #import "DHSGlyphTypesetterRotation.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DHSGlyphTypesetterRandomShiftLayoutInfo) {
     /// The maximum number of lines that will be laid out or zero for no maximum
     DHSGlyphTypesetterRandomShiftLayoutInfoMaxNumberOfLines = DHSGlyphTypesetterRotationLayoutInfoMaxNumberOfLines,
     /// The NSTextAlignment of the layout style (e.g. left, center, right)
@@ -54,7 +54,7 @@ typedef enum {
     /// The maximum angle in radians a glyph can be randomly rotated- can be positive or negative
     DHSGlyphTypesetterRandomShiftLayoutInfoRotationMax,
     DHSGlyphTypesetterRandomShiftLayoutInfoCount
-} DHSGlyphTypesetterRandomShiftLayoutInfo;
+} ;
 
 @interface DHSGlyphTypesetterRandomShift : DHSGlyphTypesetterRotation
 
