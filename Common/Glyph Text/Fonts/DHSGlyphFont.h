@@ -27,6 +27,15 @@
 
 #import "DHSGlyphTextCommon.h"
 
+/**
+ * @class DHSGlyphFont
+ *
+ * @abstract A font with metadata for use with DHSGlyphTypsetter instances
+ *
+ * @discussion This class is responsible for holding the information about a display font including its glyphs.
+ *
+ */
+
 @interface DHSGlyphFont : NSObject
 
 //
