@@ -8,13 +8,13 @@
 
 /*
  Copyright 2013 David H. Shane
- 
+
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
- 
+
  http://www.apache.org/licenses/LICENSE-2.0
- 
+
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -26,12 +26,10 @@
 
 #import "DHSGlyphSizeCache.h"
 
-#define DHSGlyphSizeCacheDefaultLevel1Items     500
-#define DHSGlyphSizeCacheDefaultMaxItems        1000
-
+#define DHSGlyphSizeCacheDefaultLevel1Items 500
+#define DHSGlyphSizeCacheDefaultMaxItems 1000
 
 @implementation DHSGlyphSizeCache
-
 
 #pragma mark -
 #pragma mark Singleton methods
@@ -39,38 +37,37 @@
 DHS_SYNTHESIZE_SINGLETON_FOR_CLASS(DHSGlyphSizeCache);
 
 + (DHSGlyphSizeCache *)cache {
-    return [self sharedInstance];
+  return [self sharedInstance];
 }
-
 
 #pragma mark -
 #pragma mark Object methods
 
 - (NSInteger)defaultNumLevel1Items {
-    return DHSGlyphSizeCacheDefaultLevel1Items;
+  return DHSGlyphSizeCacheDefaultLevel1Items;
 }
 
 - (NSInteger)defaultNumMaxItems {
-    return DHSGlyphSizeCacheDefaultMaxItems;
+  return DHSGlyphSizeCacheDefaultMaxItems;
 }
 
 - (void)removeSizeForHash:(NSString *)hashKey {
-    [self removeObjectForKey:hashKey];
+  [self removeObjectForKey:hashKey];
 }
 
 - (CGSize)sizeForHash:(NSString *)hashKey {
-    return [(NSValue *)[self objectForKey:hashKey] CGSizeValue];
+  return [(NSValue *)[self objectForKey:hashKey] CGSizeValue];
 }
 
 - (void)setSize:(CGSize)size forHash:(NSString *)hashKey {
-    [self setObject:[NSValue valueWithCGSize:size] forKey:hashKey];
+  [self setObject:[NSValue valueWithCGSize:size] forKey:hashKey];
 }
 
 - (void)setObject:(id<NSCoding>)object forKey:(NSString *)key {
-    // Nothing but sizes (NSValues)
-    if ([(id)object isKindOfClass:[NSValue class]]) {
-        [super setObject:(NSValue *)object forKey:key];
-    }
+  // Nothing but sizes (NSValues)
+  if ([(id)object isKindOfClass:[NSValue class]]) {
+    [super setObject:(NSValue *)object forKey:key];
+  }
 }
 
 @end

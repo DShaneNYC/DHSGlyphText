@@ -8,13 +8,13 @@
 
 /*
  Copyright 2013 David H. Shane
- 
+
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
- 
+
  http://www.apache.org/licenses/LICENSE-2.0
- 
+
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -33,17 +33,23 @@
 // Properties
 //
 
-/// The minimum ratio of width a glyph can be randomly shifted horizontally- can be positive or negative
-@property (nonatomic, readwrite)        CGFloat horizontalRatioMin;
-/// The maximum ratio of width a glyph can be randomly shifted horizontally- can be positive or negative
-@property (nonatomic, readwrite)        CGFloat horizontalRatioMax;
-/// The minimum ratio of height a glyph can be randomly shifted vertically- can be positive or negative
-@property (nonatomic, readwrite)        CGFloat verticalRatioMin;
-/// The maximum ratio of height a glyph can be randomly shifted vertically- can be positive or negative
-@property (nonatomic, readwrite)        CGFloat verticalRatioMax;
-/// The minimum angle in radians a glyph can be randomly rotated- can be positive or negative
-@property (nonatomic, readwrite)        CGFloat rotationMin;
-/// The maximum angle in radians a glyph can be randomly rotated- can be positive or negative
-@property (nonatomic, readwrite)        CGFloat rotationMax;
+/// The minimum ratio of width a glyph can be randomly shifted horizontally- can
+/// be positive or negative
+@property(nonatomic, readwrite) CGFloat horizontalRatioMin;
+/// The maximum ratio of width a glyph can be randomly shifted horizontally- can
+/// be positive or negative
+@property(nonatomic, readwrite) CGFloat horizontalRatioMax;
+/// The minimum ratio of height a glyph can be randomly shifted vertically- can
+/// be positive or negative
+@property(nonatomic, readwrite) CGFloat verticalRatioMin;
+/// The maximum ratio of height a glyph can be randomly shifted vertically- can
+/// be positive or negative
+@property(nonatomic, readwrite) CGFloat verticalRatioMax;
+/// The minimum angle in radians a glyph can be randomly rotated- can be
+/// positive or negative
+@property(nonatomic, readwrite) CGFloat rotationMin;
+/// The maximum angle in radians a glyph can be randomly rotated- can be
+/// positive or negative
+@property(nonatomic, readwrite) CGFloat rotationMax;
 
 @end

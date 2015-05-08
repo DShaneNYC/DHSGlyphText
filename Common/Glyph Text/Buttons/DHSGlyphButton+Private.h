@@ -8,13 +8,13 @@
 
 /*
  Copyright 2013 David H. Shane
- 
+
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
- 
+
  http://www.apache.org/licenses/LICENSE-2.0
- 
+
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -31,10 +31,12 @@
 // Properties
 //
 
-/// The \b DHSGlyphLable elements retained for each of states the button can be in based on \b UIControlState
-@property (nonatomic, readwrite)    NSDictionary *states;
-/// Whether or not the button parameters have changed and needs to be re-rendered
-@property (nonatomic, readwrite)    BOOL needsUpdate;
+/// The \b DHSGlyphLable elements retained for each of states the button can be
+/// in based on \b UIControlState
+@property(nonatomic, readwrite) NSDictionary *states;
+/// Whether or not the button parameters have changed and needs to be
+/// re-rendered
+@property(nonatomic, readwrite) BOOL needsUpdate;
 
 #pragma mark -
 #pragma mark Private methods
@@ -53,7 +55,8 @@
 - (DHSGlyphLabel *)setupLabelForState:(UIControlState)state;
 
 /**
- * Called when changes to the button state parameters are made to force the button to re-render
+ * Called when changes to the button state parameters are made to force the
+ *button to re-render
  *
  */
 - (void)setImages;

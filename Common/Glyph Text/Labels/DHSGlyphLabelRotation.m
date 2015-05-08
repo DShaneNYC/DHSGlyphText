@@ -8,13 +8,13 @@
 
 /*
  Copyright 2013 David H. Shane
- 
+
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
- 
+
  http://www.apache.org/licenses/LICENSE-2.0
- 
+
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -27,48 +27,49 @@
 #import "DHSGlyphTypesetter+Private.h"
 #import "DHSGlyphTypesetterRotation.h"
 
-
 @implementation DHSGlyphLabelRotation
 
 #pragma mark -
 #pragma mark Subclassing methods
 
 - (void)setDefaults {
-    [super setDefaults];
-    
-    NSDictionary *layoutInfo = [DHSGlyphTypesetterRotation defaultLayoutInfo];
-    
-    self.glyphRotation = [layoutInfo[@(DHSGlyphTypesetterRotationLayoutInfoGlyphRotation)] floatValue];
-    
-    self.typesetter = [DHSGlyphTypesetterRotation new];
+  [super setDefaults];
+
+  NSDictionary *layoutInfo = [DHSGlyphTypesetterRotation defaultLayoutInfo];
+
+  self.glyphRotation = [layoutInfo[
+      @(DHSGlyphTypesetterRotationLayoutInfoGlyphRotation)] floatValue];
+
+  self.typesetter = [DHSGlyphTypesetterRotation new];
 }
 
 - (NSDictionary *)layoutInfo {
-    // A subclass must overwrite this method to support the typesetters it uses
-    // This method will be called every time just before layout
-    if (self.typesetter == nil) return [NSDictionary dictionary];
-    
-    NSMutableDictionary *info = [NSMutableDictionary dictionaryWithDictionary:self.typesetter.layoutInfo];
-    
-    // Must be typesetter specific
-    if ([self.typesetter isKindOfClass:[DHSGlyphTypesetterRotation class]]) {
-        [info addEntriesFromDictionary:[super layoutInfo]];
-        
-        info[@(DHSGlyphTypesetterRotationLayoutInfoGlyphRotation)] = @(self.glyphRotation);
-    }
-    
-    return [NSDictionary dictionaryWithDictionary:info];
-}
+  // A subclass must overwrite this method to support the typesetters it uses
+  // This method will be called every time just before layout
+  if (self.typesetter == nil) return [NSDictionary dictionary];
 
+  NSMutableDictionary *info =
+      [NSMutableDictionary dictionaryWithDictionary:self.typesetter.layoutInfo];
+
+  // Must be typesetter specific
+  if ([self.typesetter isKindOfClass:[DHSGlyphTypesetterRotation class]]) {
+    [info addEntriesFromDictionary:[super layoutInfo]];
+
+    info[@(DHSGlyphTypesetterRotationLayoutInfoGlyphRotation)] =
+        @(self.glyphRotation);
+  }
+
+  return [NSDictionary dictionaryWithDictionary:info];
+}
 
 #pragma mark -
 #pragma mark Object methods
 
 - (void)setGlyphRotation:(CGFloat)glyphRotation {
-    if (_glyphRotation == glyphRotation) return;
-    _glyphRotation = glyphRotation;
-    
-    [self resetPoints];
+  if (_glyphRotation == glyphRotation) return;
+  _glyphRotation = glyphRotation;
+
+  [self resetPoints];
 }
 
 @end
